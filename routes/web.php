@@ -52,8 +52,6 @@ Route::get('/welcome_page', [HomeController::class, 'welcomePage'])->name('main_
 Route::get('/vaccination_card', [HomeController::class, 'vaccinationCard'])->name('vaccination_card');
 
 
-
-
 Route::get('/adminDashboard', [AdminController::class, 'admin'])->name('admin_dashboard');
 Route::get('/add_doctor_view', [AdminController::class, 'add_view'])->name('add_doctor_view');
 Route::post('/upload_doctor', [AdminController::class, 'upload'])->name('upload_doctor');
@@ -67,8 +65,6 @@ Route::post('/edit_doctor/{id}', [AdminController::class, 'editDoctor'])->name('
 Route::get('/vaccination_appointment', [AdminController::class, 'vaccinationAppointment'])->name('vaccination_appointments_show');
 Route::post('/appointment_update/{id}', [AdminController::class, 'appointmentUpdate'])->name('appointment_update');
 Route::get('/delete_vaccination_appointment/{id}', [AdminController::class, 'cancelVaccinationAppoint'])->name('cancel_vaccination_appointment');
-
-
 
 
 Route::post('/contact_us', [ContactController::class, 'contactUs'])->name('contact_us');

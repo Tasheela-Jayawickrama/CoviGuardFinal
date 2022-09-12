@@ -4,7 +4,7 @@
         <div class="main-outer" style="width: 500px">
                 <h1>Make An Appointment</h1>
                 @if(session()->has('message'))
-                <div class="alert alert-success">
+                <div class="alert alert-success text-center">
                         {{session()->get('message')}}
                 </div>
                 @endif
