@@ -5,6 +5,10 @@ use App\Http\Controllers\WelcomeController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ContactController;
+use App\Http\Controllers\ChatController;
+use App\Events\Message;
+use Illuminate\Http\Request;
+use Illuminate\Http\Response;
 
 /*
 |--------------------------------------------------------------------------
@@ -69,4 +73,7 @@ Route::get('/delete_vaccination_appointment/{id}', [AdminController::class, 'can
 
 Route::post('/contact_us', [ContactController::class, 'contactUs'])->name('contact_us');
 
+
+Route::get('/chat',[ChatController::class,'chatOption'])->name('chat-option');
+Route::post('/chat',[ChatController::class,'chatApplication'])->name('chat-application');
 

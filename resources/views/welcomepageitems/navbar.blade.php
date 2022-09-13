@@ -73,6 +73,9 @@
                     <a class="nav-link" href="#doctors">Doctors</a>
                 </li>
                 <li class="nav-item">
+                    <a class="nav-link" href="{{route('chatify')}}">Chat Option</a>
+                </li>
+                <li class="nav-item">
                     <a class="nav-link" href="https://www.1990.lk/news/1990-suwa-seriya/" target="_blank"><i class="fa-solid fa-truck-medical"></i></a>
                 </li>
             </ul>
