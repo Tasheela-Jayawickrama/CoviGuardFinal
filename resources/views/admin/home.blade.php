@@ -1,89 +1,75 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+              integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+        <link rel="icon" href="images/logo.png">
+        <title>Admin</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
-          integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
-    <link rel="icon" href="images/logo.png">
-    <title>Admin</title>
     <style>
+        body {
+            margin: 0;
+            font-family: "Lato", sans-serif;
+        }
 
-        .inner-items {
-            width: 100%;
+        .sidebar {
+            margin: 0;
+            padding: 0;
+            width: 250px;
+            background-color: #f1f1f1;
+            position: fixed;
             height: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-
-
+            overflow: auto;
         }
 
-        .left {
-            width: 100%;
-            height: 100%;
+        .sidebar a {
+            display: block;
+            color: black;
+            padding: 16px;
+            text-decoration: none;
         }
 
-        .navbar-brand {
-            font-family: Ubuntu;
-            font-size: 30px;
-            font-weight: 900;
-        }
-
-        .navbar-nav .nav-link {
-            font-family: Ubuntu;
-            font-weight: 900;
-            color: darkblue;
-        }
-
-        .component-area {
-            height: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .box {
-            margin: 10px 20px;
-            width: 450px;
-            height: 550px;
-            background-size: cover;
-            background-position: center;
-            border-radius: 30px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-        }
-
-        .box a {
+        .sidebar a.active {
+            background-color: #04AA6D;
             color: white;
-            font-size: 50px;
-            font-weight: 900;
-            letter-spacing: 5px;
-
         }
 
-        .doc-box {
-            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/admin-doctor.jpg');
-
+        .sidebar a:hover:not(.active) {
+            background-color: blue;
+            color: white;
+        }
+        .navbar{
+            position: sticky;
+            top: 0;
         }
 
-        .citi-box {
-            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/admin-citizen.jpg');
-
+        div.content {
+            margin-left: 270px;
+            padding: 1px 16px;
+            height: 100%;
         }
 
-        .appoint-box {
-            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/admin-appointment.jpg');
-
+        @media screen and (max-width: 700px) {
+            .sidebar {
+                width: 100%;
+                height: auto;
+                position: relative;
+            }
+            .sidebar a {float: left;}
+            div.content {margin-left: 0;}
         }
 
+        @media screen and (max-width: 400px) {
+            .sidebar a {
+                text-align: center;
+                float: none;
+            }
+        }
+        .nav-item{
+            list-style: none;
+        }
     </style>
 </head>
-
-
 <body>
 <nav class="navbar navbar-expand-lg bg-light">
     <div class="container-fluid">
@@ -94,18 +80,36 @@
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item">
-                    <a class="nav-link" aria-current="page" href="{{route('add_doctor_view')}}">Manage Doctors</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" aria-current="page" href="">Manage Citizens</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" aria-current="page" href="{{route('show_appointment')}}">Manage Appointments</a>
-                </li>
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                DOCTOR
+            </a>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="{{route('add_doctor_view')}}">Add Doctor</a></li>
+                <li><a class="dropdown-item" href="{{route('show_doctor_view')}}">View Doctor</a></li>
+                <li><a class="dropdown-item" href="{{route('show_doctor_view')}}">Update Doctor</a></li>
             </ul>
+        </li>
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                CITIZEN
+            </a>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+        </li>
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                APPOINTMENT
+            </a>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="{{route('show_appointment')}}">Doctor Appointments</a></li>
+                <li><a class="dropdown-item" href="{{route('vaccination_appointments_show')}}">Vaccination Appointments</a></li>
+            </ul>
+        </li>
             <form class="d-flex" role="search">
                 <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
                 <button class="btn btn-outline-success" type="submit">Search</button>
@@ -116,28 +120,21 @@
         </div>
     </div>
 </nav>
-<div class="body-pane">
-    <div class="row">
-        <div class="inner-items col-lg-12 col-md-8 col-sm-6">
-            <div class="row left">
-                <div class="col-lg-12 col-md-8 col-sm-6">
-                    <div class="component-area">
-                        <div class="box doc-box">
-                            <a href="{{route('add_doctor_view')}}">Doctors</a>
-                        </div>
-                        <div class="box citi-box">
-                            <a href="">Citizens</a>
-                        </div>
-                        <div class="box appoint-box">
-                            <a href="{{route('show_appointment')}}">Appointments</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
 
-        </div>
-    </div>
+<div class="sidebar bg-light">
+    <a href="{{route('add_doctor_view')}}">Add Doctors</a>
+    <a href="{{route('show_doctor_view')}}">Show Doctors</a>
+    <a href="{{route('show_doctor_view')}}">Update Doctors</a>
+    <a href="{{route('show_appointment')}}">Doctor Appointments</a>
+    <a href="{{route('vaccination_appointments_show')}}">Vaccination Appointments</a>
+    <a href="{{route('chatify')}}">Chat With User</a>
+</div>
 
+<div class="content">
+    <h2>Responsive Sidebar Example</h2>
+    <p>This example use media queries to transform the sidebar to a top navigation bar when the screen size is 700px or less.</p>
+    <p>We have also added a media query for screens that are 400px or less, which will vertically stack and center the navigation links.</p>
+    <h3>Resize the browser window to see the effect.</h3>
 </div>
 
 </body>

@@ -115,7 +115,7 @@
                 </div>
                 <div class="col box">
                     <h1>Chat With Us</h1>
-                    <i class="fa-solid fa-comment-medical"></i>
+                    <a href="{{route('chatify')}}"><i class="fa-solid fa-comment-medical"></i></a>
                 </div>
             </div>
             <div class="row">
