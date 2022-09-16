@@ -219,8 +219,10 @@
                                 <span class="text-danger error">@error('phone'){{ $message }}  @enderror</span>
                             </div>
                             <div class="col all">
-                                <input type="text" class="form-control" placeholder="Gender" aria-label="gender" name="gender">
-                                <span class="text-danger error">@error('gender'){{ $message }}  @enderror</span>
+                                <select class="form-select" aria-label="gender" name="gender">
+                                    <option value="Male">Male</option>
+                                    <option value="Female">Female</option>
+                                </select>
                             </div>
                         </div>
                         <div class="row">

@@ -134,6 +134,7 @@
     <a href="{{route('show_doctor_view')}}">Update Doctors</a>
     <a href="{{route('show_appointment')}}">Doctor Appointments</a>
     <a href="{{route('vaccination_appointments_show')}}">Vaccination Appointments</a>
+    <a href="{{route('user_contacts')}}">User Contacts</a>
     <a href="{{route('chatify')}}">Chat With User</a>
 </div>
 

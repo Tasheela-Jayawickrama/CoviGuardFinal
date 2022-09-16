@@ -72,6 +72,7 @@ Route::get('/delete_vaccination_appointment/{id}', [AdminController::class, 'can
 
 
 Route::post('/contact_us', [ContactController::class, 'contactUs'])->name('contact_us');
+Route::get('/contact_details', [ContactController::class, 'userContacts'])->name('user_contacts');
 
 
 Route::get('/chat',[ChatController::class,'chatOption'])->name('chat-option');
