@@ -82,11 +82,11 @@
 
                         <x-slot name="content">
                             <!-- Account Management -->
-                            <div class="block px-4 py-2 text-xs text-gray-400">
+                            <div class="block px-4 py-2 text-xs text-black-900" style="font-size: 15px">
                                 {{ __('Manage Account') }}
                             </div>
 
-                            <x-jet-dropdown-link href="{{ route('profile.show') }}">
+                            <x-jet-dropdown-link href="{{ route('profile.show') }}" style="color: black">
                                 {{ __('Profile') }}
                             </x-jet-dropdown-link>
 
@@ -103,7 +103,7 @@
                                 @csrf
 
                                 <x-jet-dropdown-link href="{{ route('logout') }}"
-                                         @click.prevent="$root.submit();">
+                                         @click.prevent="$root.submit();"  style="color: black">
                                     {{ __('Log Out') }}
                                 </x-jet-dropdown-link>
                             </form>

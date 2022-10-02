@@ -40,7 +40,11 @@ class HomeController extends Controller
                 $doctor = doctor::all();
                 return view('user.home', compact('doctor'));
             } else {
-                return view('admin.home');
+                $all_users = User::where('user_type','0')->count();
+                $all_doctors = Doctor::count();
+                $all_doctor_appointments = Appointment::count();
+                $all_vaccination_appointments = VaccinationAppointment::count();
+                return view('admin.home',compact('all_users','all_doctors','all_doctor_appointments','all_vaccination_appointments'));
             }
         } else {
             return redirect()->back();

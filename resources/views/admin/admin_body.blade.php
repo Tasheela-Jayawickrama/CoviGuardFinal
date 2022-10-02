@@ -48,6 +48,7 @@
         .navbar{
             position: sticky;
             top: 0;
+            z-index: 5000;
         }
 
         div.content {
@@ -74,6 +75,9 @@
         }
         .nav-item{
             list-style: none;
+        }
+        .fa-caret-right{
+            width: 20px;
         }
     </style>
 </head>
@@ -128,13 +132,13 @@
 </nav>
 
 <div class="sidebar bg-dark">
-    <a href="{{route('add_doctor_view')}}">Add Doctors</a>
-    <a href="{{route('show_doctor_view')}}">Show Doctors</a>
-    <a href="{{route('show_doctor_view')}}">Update Doctors</a>
-    <a href="{{route('show_appointment')}}">Doctor Appointments</a>
-    <a href="{{route('vaccination_appointments_show')}}">Vaccination Appointments</a>
-    <a href="{{route('user_contacts')}}">User Contacts</a>
-    <a href="{{route('chatify')}}">Chat With User</a>
+    <a href="{{route('add_doctor_view')}}"><i class="fa-solid fa-caret-right"></i>Add Doctors</a>
+    <a href="{{route('show_doctor_view')}}"><i class="fa-solid fa-caret-right"></i>Show Doctors</a>
+    <a href="{{route('show_doctor_view')}}"><i class="fa-solid fa-caret-right"></i>Update Doctors</a>
+    <a href="{{route('show_appointment')}}"><i class="fa-solid fa-caret-right"></i>Doctor Appointments</a>
+    <a href="{{route('vaccination_appointments_show')}}"><i class="fa-solid fa-caret-right"></i>Vaccination Appointments</a>
+    <a href="{{route('user_contacts')}}"><i class="fa-solid fa-caret-right"></i>User Contacts</a>
+    <a href="{{route('chatify')}}"><i class="fa-solid fa-caret-right"></i>Chat With User</a>
 </div>
 </body>
 </html>
