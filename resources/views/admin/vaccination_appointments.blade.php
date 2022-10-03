@@ -44,9 +44,8 @@
 
             <tr>
                 <th>Name</th>
-                <th>Identity</th>
-                <th>Vaccination ID</th>
-                <th>Test Results</th>
+                <th width="130px">Vaccination ID</th>
+                <th>Recognition ID</th>
                 <th>Date</th>
                 <th>Vaccination Date</th>
                 <th>Center</th>
@@ -58,10 +57,9 @@
             @foreach($vaccination_appointment_data as $appointment_data)
                 <tr>
                     <td>{{$appointment_data->name}}</td>
-                    <td>{{$appointment_data->identity}}</td>
-                    <td>{{$appointment_data->vaccination_id}}</td>
-                    <td>{{$appointment_data->test_result}}</td>
-                    <td>{{$appointment_data->date}}</td>
+                    <td width="70px">{{$appointment_data->vaccination_id}}</td>
+                    <td width="350px">{{$appointment_data->cust_id}}</td>
+                    <td width="150px">{{$appointment_data->date}}</td>
                     <form action="{{route('appointment_update',$appointment_data->id)}}" method="POST">
                         @csrf
                         <td><input type="date" class="form-control" name="vaccination_date"></td>
