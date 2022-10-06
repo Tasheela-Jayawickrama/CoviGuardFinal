@@ -80,7 +80,18 @@
             color: blue;
             letter-spacing: 2px;
         }
+        @media screen and (max-width: 600px) {
+            .emergency_row .emergency_text h1{
+                font-size: 15px;
+            }
+            .emergency_row .fa-truck-medical{
+                display: none;
+            }
+            .emergency_row .emergency_text_number{
+                font-size: 15px;
+            }
 
+        }
     </style>
 </head>
 <body>

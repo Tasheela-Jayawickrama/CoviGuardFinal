@@ -1,4 +1,4 @@
-<title>{{ config('chatify.name') }}</title>
+<title>{{ 'CoviGuard Messenger'}}</title>
 
 {{-- Meta tags --}}
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -21,6 +21,7 @@
 <link href="{{ asset('css/chatify/style.css') }}" rel="stylesheet" />
 <link href="{{ asset('css/chatify/'.$dark_mode.'.mode.css') }}" rel="stylesheet" />
 <link href="{{ asset('css/app.css') }}" rel="stylesheet" />
+<link rel="icon" href="images/logo.png">
 
 {{-- Messenger Color Style--}}
 @include('Chatify::layouts.messengerColor')
