@@ -1,22 +1,19 @@
 @include('Chatify::layouts.headLinks')
 @include('layouts.all-css')
 
-<style>
-
-</style>
 <div class="messenger">
     {{-- ----------------------Users/Groups lists side---------------------- --}}
     <div class="messenger-listView">
         {{-- Header and search bar --}}
         <div class="m-header">
             <nav>
-                <a href="" style="margin-right: 10px; font-size: 20px">Home</a>
-                <a href="{{route('symptoms')}}" class="" style="margin-right: 10px; font-size: 25px;color: blue"><i class="fa-solid fa-puzzle-piece"></i></a>
-                <a href="{{route('lung_test')}}" style="margin-right: 10px; font-size: 25px; color: yellow"><i class="fa-solid fa-microscope"></i></a>
-                <a href="{{route('vaccination_appointments')}}" style="margin-right: 10px; font-size: 25px; color: red"><i class="fa-solid fa-vial-virus"></i></a>
-                <a href="{{route('appointmentpage')}}" style="margin-right: 10px; font-size: 25px; color: orange"><i class="fa-solid fa-stethoscope"></i></a>
-                <a href=""><i class="fa-solid fa-globe" style="margin-right: 10px; font-size: 25px;color: green"></i></a>
-                <a href="{{route('chatify')}}" style="font-size: 25px; color: purple"><i class="fa-solid fa-comment-medical"></i></a>
+                <a href="{{route('admin_dashboard') }}" style="margin-right: 10px; font-size: 20px">Home</a>
+{{--                <a href="{{route('symptoms')}}" class="" style="margin-right: 10px; font-size: 25px;color: blue"><i class="fa-solid fa-puzzle-piece"></i></a>--}}
+{{--                <a href="{{route('lung_test')}}" style="margin-right: 10px; font-size: 25px; color: yellow"><i class="fa-solid fa-microscope"></i></a>--}}
+{{--                <a href="{{route('vaccination_appointments')}}" style="margin-right: 10px; font-size: 25px; color: red"><i class="fa-solid fa-vial-virus"></i></a>--}}
+{{--                <a href="{{route('appointmentpage')}}" style="margin-right: 10px; font-size: 25px; color: orange"><i class="fa-solid fa-stethoscope"></i></a>--}}
+{{--                <a href=""><i class="fa-solid fa-globe" style="margin-right: 10px; font-size: 25px;color: green"></i></a>--}}
+{{--                <a href="{{route('chatify')}}" style="font-size: 25px; color: purple"><i class="fa-solid fa-comment-medical"></i></a>--}}
                 {{-- header buttons --}}
                 <nav class="m-header-right">
                     <a href="#"><i class="fas fa-cog settings-btn"></i></a>
