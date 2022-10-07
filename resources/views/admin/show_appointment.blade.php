@@ -13,10 +13,9 @@
 
 <div class="content">
     <div class="main-outer">
-                <table>
-                    <thead>
-
-                    <tr>
+                <table class="table">
+                    <thead class="thead thead-dark" style="position: sticky; top: 80px; border: none">
+                    <tr style="background-color: black; color: white">
                         <th>Custemer Name</th>
                         <th>Email</th>
                         <th>phone</th>

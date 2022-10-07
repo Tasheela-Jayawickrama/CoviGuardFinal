@@ -1,4 +1,5 @@
 @include('admin.admin_body')
+
     <!doctype html>
 <html lang="en">
 <head>
@@ -6,7 +7,6 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
     <style>
         .count {
             padding-top: 10px;
@@ -103,7 +103,7 @@
             <div class="card card-doctor">
                 <div class="card-body">
                     <div class="card-body-name">
-                        <h5 class="card-title"><i class="fa-solid fa-user-doctor"></i> </h5>
+                        <h5 class="card-title"><i class="fa-solid fa-user-doctor"></i></h5>
                         <h6 class="card-subtitle mb-2 ">Total Doctors</h6>
                     </div>
                     <h1>{{ $all_doctors }}</h1>
