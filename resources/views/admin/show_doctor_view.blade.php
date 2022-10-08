@@ -5,7 +5,6 @@
             padding: 5px 30px;
             border-bottom: 1px solid black;
         }
-
         .fa-solid {
             font-size: 30px;
         }

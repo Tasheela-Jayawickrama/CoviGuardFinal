@@ -5,7 +5,7 @@
             <div class="form-area">
 
                 @if(session()->has('message'))
-                    <div class="alert alert-success">
+                    <div class="alert alert-success text-cen">
                         {{session()->get('message')}}
                     </div>
                 @endif
