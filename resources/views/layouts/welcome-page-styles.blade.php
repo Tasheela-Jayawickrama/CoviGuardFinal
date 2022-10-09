@@ -190,10 +190,26 @@
         opacity: 1;
     }
 
-    .fa-chevron-right,
-    .fa-chevron-left {
+    .fa-caret-left,
+    .fa-caret-right{
         font-size: 100px;
         color: blue;
     }
     /*---------------------------------------Doctor-page-styles-----------------------------------------*/
+    /*---------------------------------------all-pages-icon-styles-----------------------------------------*/
+    .fa-people-group,
+    .fa-person-circle-question,
+    .fa-headset,
+    .fa-sitemap,
+    .fa-user-doctor{
+        padding-bottom: 5px;
+        font-size: 35px;
+        color: blue;
+        border-bottom: 5px solid black;
+
+    }
+
+
+    /*---------------------------------------all-pages-icon-styles-----------------------------------------*/
+
 </style>

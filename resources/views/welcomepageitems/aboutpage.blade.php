@@ -15,6 +15,7 @@
         <div class="page-title text-center">
             <h1>About</h1>
         </div>
+        <div class="text-center"><i class="fa-solid fa-people-group"></i></div>
         <div class="main-content">
             <div class="page-image" style="align-items: center;">
                 <img src="./images/about-us-image.jpg" alt="about-page-image" width="550px">

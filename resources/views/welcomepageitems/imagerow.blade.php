@@ -74,10 +74,22 @@
         .image-box:hover {
             cursor: pointer;
         }
+        .icon-row .fa-solid{
+            font-size: 35px;
+            color: blue;
+            margin: 5px;
+        }
 
     </style>
 </head>
 <body>
+<div class="icon-row text-center">
+    <i class="fa-solid fa-virus-covid"></i>
+    <i class="fa-solid fa-lungs-virus"></i>
+    <i class="fa-solid fa-head-side-virus"></i>
+    <i class="fa-solid fa-head-side-mask"></i>
+    <i class="fa-solid fa-shield-virus"></i>
+</div>
 <div class="image-row">
     <div class="img-all">
         <div class="inner">

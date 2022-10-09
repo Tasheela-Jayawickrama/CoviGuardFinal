@@ -3,11 +3,12 @@
         <div class="page-title text-center">
             <h1>Doctors</h1>
         </div>
+        <div class="text-center"><i class="fa-solid fa-user-doctor"></i></div>
         <div class="main-content">
             <div class="doc-area">
                 <section class="doc">
-                    <button class="pre-btn"><i class="fa-solid fa-chevron-left"></i></button>
-                    <button class="nxt-btn"><i class="fa-solid fa-chevron-right"></i></button>
+                    <button class="pre-btn"><i class="fa-solid fa-caret-left"></i></button>
+                    <button class="nxt-btn"><i class="fa-solid fa-caret-right"></i></button>
                     <div class="doc-container">
                         @foreach($doctors as $doctor)
                             <div class="doc-card">

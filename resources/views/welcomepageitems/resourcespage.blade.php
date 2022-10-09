@@ -14,6 +14,7 @@
         <div class="page-title text-center">
             <h1>Resources</h1>
         </div>
+        <div class="text-center"><i class="fa-solid fa-sitemap"></i></div>
         <div class="main-content">
             <div class="resource-page-boxes">
                 <div class="card" style="width: 18rem;">

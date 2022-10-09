@@ -14,6 +14,7 @@
         <div class="page-title text-center">
             <h1></h1>
         </div>
+        <i class="fa-solid fa-house text-center"></i>
         <div class="main-content">
             <div class="page-description">
                 <h1 class="home-title">together we fight against to covid-19.</h1>

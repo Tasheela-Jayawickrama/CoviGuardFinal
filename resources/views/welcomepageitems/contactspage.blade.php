@@ -14,6 +14,7 @@
         <div class="page-title text-center">
             <h1>Contact Us</h1>
         </div>
+        <div class="text-center"><i class="fa-solid fa-headset"></i></div>
         <div class="main-content">
             <div class="page-image">
                 <img src="./images/contact-us-image.jpg" alt="contacts-page-image" width="550px">

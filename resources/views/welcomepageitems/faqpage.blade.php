@@ -14,6 +14,7 @@
         <div class="page-title text-center">
             <h1>FAQ</h1>
         </div>
+        <div class="text-center"><i class="fa-solid fa-person-circle-question"></i></div>
         <div class="main-content">
             <div class="page-description">
                 <div class="accordion" id="accordionExample">
