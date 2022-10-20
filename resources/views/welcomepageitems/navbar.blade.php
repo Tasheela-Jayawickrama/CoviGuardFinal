@@ -82,6 +82,7 @@
                 <li class="nav-item">
                     <a class="nav-link" href="#doctors">Doctors</a>
                 </li>
+                {{-- Navigation bar Link to 1990 Suwasariya Ambulance service --}}
                 <li class="nav-item">
                     <a class="nav-link" href="https://www.1990.lk/news/1990-suwa-seriya/" target="_blank"><i
                             class="fa-solid fa-truck-medical"></i></a>
@@ -89,6 +90,8 @@
             </ul>
             @if(Route::has('login'))
                 @auth
+
+                    {{-- Navigation bar changes when user_type is 0 (Normal user) --}}
                     @if(auth()->user()->user_type == 0)
                         <div class="nav-item">
                             <a class="nav-link" href="{{route('userDashBoard')}}"><i class="fa-solid fa-users-gear"></i></a>
@@ -98,6 +101,7 @@
                         </div>
                         <x-app-layout></x-app-layout>
                     @else
+                    {{-- Navigation bar changes when user_type is 1 (Admin User) --}}
                         <div class="nav-item">
                             <a class="nav-link" href="{{route('admin_dashboard')}}"><i class="fa-solid fa-users-gear"></i></a>
                         </div>

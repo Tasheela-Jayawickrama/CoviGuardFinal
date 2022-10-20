@@ -16,6 +16,8 @@
                 <table class="table">
                     <thead class="thead thead-dark" style="position: sticky; top: 80px; border: none">
                     <tr style="background-color: black; color: white">
+
+                        {{-- Table Header --}}
                         <th>Custemer Name</th>
                         <th>Email</th>
                         <th>phone</th>
@@ -29,6 +31,8 @@
 
                     </thead>
                     <tbody>
+
+                        {{-- Table Data --}}
 
                     @foreach($data as $appoint)
                     <tr>

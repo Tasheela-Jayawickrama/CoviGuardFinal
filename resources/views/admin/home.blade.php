@@ -85,8 +85,12 @@
     </style>
 </head>
 <body>
+
+    {{-- Admin Page Content --}}
 <div class="content content-home">
     <div class="row count">
+
+        {{-- All users count--}}
         <div class="col">
             <div class="card card-user">
                 <div class="card-body">
@@ -99,6 +103,8 @@
 
             </div>
         </div>
+
+        {{-- All Doctors count --}}
         <div class="col">
             <div class="card card-doctor">
                 <div class="card-body">
@@ -110,6 +116,8 @@
                 </div>
             </div>
         </div>
+
+        {{-- All Doctor appointments count --}}
         <div class="col">
             <div class="card card-doc-app">
                 <div class="card-body">
@@ -123,6 +131,8 @@
                 </div>
             </div>
         </div>
+
+        {{-- All Vaccination appointments count --}}
         <div class="col">
             <div class="card card-vac-app">
                 <div class="card-body">

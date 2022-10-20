@@ -1,14 +1,4 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-
-</head>
-<body>
+{{-- Welcome page styles --}}
 @include('layouts.welcome-page-styles')
 <section id="about">
     <div class="about-page-outer">
@@ -17,9 +7,11 @@
         </div>
         <div class="text-center"><i class="fa-solid fa-people-group"></i></div>
         <div class="main-content">
+            {{-- About page image --}}
             <div class="page-image" style="align-items: center;">
                 <img src="./images/about-us-image.jpg" alt="about-page-image" width="550px">
             </div>
+            {{-- About page Description --}}
             <div class="page-description">
                 <h1 class="about-title">Here a little bit about covi guard</h1>
                 <p class="about-description">Coronavirus disease 2019 (covid-19 or simply covid) is a contagious disease caused by severe acute respiratory syndrome coronavirus 2 (sars-cov-2). The first known case was identified in Wuhan, China, in December 2019. The disease
@@ -35,5 +27,3 @@
 
     </div>
 </section>
-</body>
-</html>

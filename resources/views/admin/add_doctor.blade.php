@@ -4,12 +4,15 @@
             <h1 class="text-center" style="font-size: 50px">Add Doctors</h1>
             <div class="form-area">
 
+                {{-- success-alert --}}
+
                 @if(session()->has('message'))
                     <div class="alert alert-success text-center">
                         {{session()->get('message')}}
                     </div>
                 @endif
 
+                {{-- Add Doctor Form Area --}}
 
                 <form action="{{route('upload_doctor')}}" method="POST" enctype="multipart/form-data">
                     @csrf

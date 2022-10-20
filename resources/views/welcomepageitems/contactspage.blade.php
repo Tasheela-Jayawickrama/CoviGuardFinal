@@ -1,14 +1,7 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-</head>
-<body>
+{{-- Welcome page styles --}}
+
 @include('layouts.welcome-page-styles')
+
 <section id="contacts">
     <div class="contacts-page-outer">
         <div class="page-title text-center">
@@ -16,9 +9,13 @@
         </div>
         <div class="text-center"><i class="fa-solid fa-headset"></i></div>
         <div class="main-content">
+            {{-- Contacts us page image --}}
+
             <div class="page-image">
                 <img src="./images/contact-us-image.jpg" alt="contacts-page-image" width="550px">
             </div>
+            {{-- Contacts us page Description --}}
+
             <div class="page-description" style="align-items: center">
                 <div class="contact-form-inner">
                     @if(session()->has('message'))
@@ -26,6 +23,9 @@
                             {{session()->get('message')}}
                         </div>
                     @endif
+
+                    {{-- Contacts us page Contacts Form --}}
+
                     <form action="{{route('contact_us')}}" method="POST">
                         @csrf
                         <p class="text-center cuname">Contact Us 24/7</p>
@@ -50,5 +50,4 @@
         </div>
     </div>
 </section>
-</body>
-</html>
+

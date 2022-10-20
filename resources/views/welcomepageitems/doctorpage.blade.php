@@ -1,3 +1,7 @@
+{{-- Welcome page styles --}}
+
+@include('layouts.welcome-page-styles')
+
 <section id="doctors">
     <div class="doctor-page-outer">
         <div class="page-title text-center">
