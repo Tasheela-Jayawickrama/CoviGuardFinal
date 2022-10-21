@@ -80,7 +80,7 @@
                     <a class="nav-link" href="{{route('my_appointment')}}">Doctor Appointment</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="">News</a>
+                    <a class="nav-link" href="{{route('news_page')}}">News</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link vac-card" href="{{route('vaccination_card')}}" >Vaccination Card</a>

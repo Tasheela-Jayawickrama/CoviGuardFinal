@@ -122,7 +122,7 @@
                 </div>
                 <div class="col box">
                     <h1>News</h1>
-                    <i class="fa-solid fa-globe"></i>
+                    <a href="{{route('news_page')}}"><i class="fa-solid fa-globe"></i></a>
                 </div>
                 <div class="col box">
                     <h1>Chat With Us</h1>

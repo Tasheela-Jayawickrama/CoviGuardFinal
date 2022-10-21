@@ -211,5 +211,10 @@
 
 
     /*---------------------------------------all-pages-icon-styles-----------------------------------------*/
+    @media only screen and(max-width: 600px){
+        .home-image{
+            width: 20px;
+        }
+    }
 
 </style>

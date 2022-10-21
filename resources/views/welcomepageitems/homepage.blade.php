@@ -26,7 +26,7 @@
                     <button class="btn btn-primary">See More Details</button>
                 </div>
             </div>
-            <div class="page-image" style="align-items: center;">
+            <div class="page-image home-image" style="align-items: center;">
                 <img src="./images/home-page-image.png" class="img-responsive" alt="home-page-image" width="400px">
             </div>
         </div>
