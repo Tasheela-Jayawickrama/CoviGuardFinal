@@ -18,7 +18,6 @@
         .card-body {
             width: 100%;
             height: 200px;
-            background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.5)), url("https://thumbs.dreamstime.com/b/rainbow-love-heart-background-red-wood-60045149.jpg");
             background-size: cover;
             background-position: center;
             display: flex;
@@ -47,6 +46,16 @@
             color: black;
 
         }
+        .news-image01{background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('images/news_page_images/01.jpg');}
+        .news-image02{background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('images/news_page_images/02.jpg');}
+        .news-image03{background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('images/news_page_images/03.jpg');}
+        .news-image04{background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('images/news_page_images/04.png');}
+        .news-image05{background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('images/news_page_images/05.jpg');}
+        .news-image06{background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('images/news_page_images/06.jpg');}
+
+        .btn-width{
+            width: 250px;
+        }
     </style>
 </head>
 <body>
@@ -64,17 +73,17 @@
             <ul class="navbar-nav">
                 <li class="nav-item">
                     <a class="nav-link active" aria-current="page" href="#local-news">
-                        <button class="btn btn-outline-primary">Local News</button>
+                        <button class="btn btn-outline-primary btn-width">Local News</button>
                     </a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link active" aria-current="page" href="#global-news">
-                        <button class="btn btn-outline-primary">Global News</button>
+                        <button class="btn btn-outline-primary btn-width" >Global News</button>
                     </a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link active" aria-current="page" href="{{route('userDashBoard')}}">
-                        <button class="btn btn-outline-primary">Dash Board</button>
+                        <button class="btn btn-outline-primary btn-width">Dash Board</button>
                     </a>
                 </li>
             </ul>
@@ -98,7 +107,7 @@
                 <div class="carousel-inner">
                     <div class="carousel-item active" data-bs-interval="2000">
                         <img
-                            src="https://media.istockphoto.com/photos/mountain-landscape-picture-id1170655400?k=20&m=1170655400&s=612x612&w=0&h=Cz9OZXmfgtjEb-0yAkSG1j_Yb182jlUfuTuuia3LGQQ="
+                            src="./images/news_page_images/10.jpg"
                             class="d-block w-100" alt="..." height="617px">
                         <div class="carousel-caption d-none d-md-block">
                             <h5>First slide label</h5>
@@ -107,7 +116,7 @@
                     </div>
                     <div class="carousel-item" data-bs-interval="2000">
                         <img
-                            src="https://media.istockphoto.com/photos/mountain-landscape-picture-id517188688?b=1&k=20&m=517188688&s=612x612&w=0&h=x8h70-SXuizg3dcqN4oVe9idppdt8FUVeBFemfaMU7w="
+                        src="images/news_page_images/11.jpg"
                             class="d-block w-100" alt="..." height="617px">
                         <div class="carousel-caption d-none d-md-block">
                             <h5>Second slide label</h5>
@@ -116,7 +125,7 @@
                     </div>
                     <div class="carousel-item " data-bs-interval="2000">
                         <img
-                            src="https://media.istockphoto.com/photos/mountain-landscape-picture-id517188688?b=1&k=20&m=517188688&s=612x612&w=0&h=x8h70-SXuizg3dcqN4oVe9idppdt8FUVeBFemfaMU7w="
+                        src="images/news_page_images/12.webp"
                             class="d-block w-100" alt="..." height="617px">
                         <div class="carousel-caption d-none d-md-block">
                             <h5>Third slide label</h5>
@@ -140,21 +149,17 @@
             <div class="row pt-2">
                 <div class="col">
                     <div class="card" style="width: 18rem;">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text text-light">Some quick example text to build on the card title and make
-                                up the bulk of the card's content.</p>
-                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                        <div class="card-body news-image01">
+
+                                <a href="#" class="btn btn-outline-light">Go somewhere</a>
                         </div>
                     </div>
                 </div>
                 <div class="col">
                     <div class="card" style="width: 18rem;">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text text-light">Some quick example text to build on the card title and make
-                                up the bulk of the card's content.</p>
-                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                        <div class="card-body news-image02">
+
+                                <a href="#" class="btn btn-outline-light">Go somewhere</a>
                         </div>
                     </div>
                 </div>
@@ -162,21 +167,19 @@
             <div class="row pt-2">
                 <div class="col">
                     <div class="card" style="width: 18rem;">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text text-light">Some quick example text to build on the card title and make
-                                up the bulk of the card's content.</p>
-                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                        <div class="card-body news-image03">
+
+
+                                <a href="#" class="btn btn-outline-light ">Go somewhere</a>
                         </div>
                     </div>
                 </div>
                 <div class="col">
                     <div class="card" style="width: 18rem;">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text text-light">Some quick example text to build on the card title and make
-                                up the bulk of the card's content.</p>
-                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                        <div class="card-body news-image04">
+
+
+                                <a href="#" class="btn btn-outline-light ">Go somewhere</a>
                         </div>
                     </div>
                 </div>
@@ -184,21 +187,19 @@
             <div class="row pt-2">
                 <div class="col">
                     <div class="card" style="width: 18rem;">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text text-light">Some quick example text to build on the card title and make
-                                up the bulk of the card's content.</p>
-                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                        <div class="card-body news-image05">
+
+
+                                <a href="#" class="btn btn-outline-light">Go somewhere</a>
                         </div>
                     </div>
                 </div>
                 <div class="col">
                     <div class="card" style="width: 18rem;">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text text-light">Some quick example text to build on the card title and make
-                                up the bulk of the card's content.</p>
-                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                        <div class="card-body news-image06">
+
+
+                            <a href="#" class="btn btn-outline-light">Go somewhere</a>
                         </div>
                     </div>
                 </div>
