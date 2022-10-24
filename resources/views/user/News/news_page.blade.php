@@ -219,6 +219,11 @@
     <div class="row title-row mt-5">
         <h1 class="news-title-text">Global Covid News</h1>
     </div>
+
+
+    <div class="row world-news">
+        @include('user.News.world_news_page')
+    </div>
 </div>
 </div>
 {{--------------------------------carouseal page-------------------------------------------}}
