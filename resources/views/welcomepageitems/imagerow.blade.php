@@ -83,7 +83,7 @@
     </style>
 </head>
 <body>
-<div class="icon-row text-center">
+<div class="icon-row text-center mt-5">
     <i class="fa-solid fa-virus-covid"></i>
     <i class="fa-solid fa-lungs-virus"></i>
     <i class="fa-solid fa-head-side-virus"></i>
