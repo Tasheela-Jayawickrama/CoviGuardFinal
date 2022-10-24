@@ -44,6 +44,7 @@
         }
         .news-navbar{
             background-color: #ccddff;
+            color: black;
 
         }
     </style>
