@@ -3,7 +3,6 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-
         <title>CoviGuard</title>
         <link rel="icon" href="images/logo.png">
 
@@ -16,41 +15,38 @@
         @include('layouts.all-css')
     </head>
     <body class="antialiased">
-        */---------------------------nav bar---------------------*/
+
     <section id="navibar" style="position:sticky; top:0;z-index:1000;">
         @include('welcomepageitems.navbar')
     </section>
 
-    */---------------------------Home Page---------------------*/
+
     <section id="home">
         @include('welcomepageitems.homepage')
     </section>
 
-    */---------------------------Covid-19 Images Section---------------------*/
+
     @include('welcomepageitems.imagerow')
 
-    */---------------------------About Page---------------------*/
 
     <section id="about">
         @include('welcomepageitems.aboutpage')
     </section>
 
-    */---------------------------FAQ Page---------------------*/
+
     <section id="faq">
         @include('welcomepageitems.faqpage');
     </section>
 
-    */---------------------------Contacts Page---------------------*/
     <section id="contacts">
         @include('welcomepageitems.contactspage')
     </section>
 
-    */---------------------------Resources Page---------------------*/
     <section id="resources">
         @include('welcomepageitems.resourcespage')
     </section>
 
-    */---------------------------Doctors page---------------------*/
+
     <section id="doctors">
         @include('welcomepageitems.doctorpage')
     </section>

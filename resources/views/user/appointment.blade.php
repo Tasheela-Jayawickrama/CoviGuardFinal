@@ -1,8 +1,23 @@
 @include('user.usernavbar')
 @include('layouts.all-css')
+<style>
+    .doctor-app-image{
+        width: 700px;
+        height: 100%;
+        background-image: url('images/Doctor_appointment_page_image.png');
+        background-size: cover;
+        background-position: center;
+    }
+    .appointment-title{
+            font-weight: 900;
+            color: darkblue
+        }
+</style>
 <div class="container">
-        <div class="main-outer" style="width: 500px">
-                <h1>Make An Appointment</h1>
+    <div class="row text-center"><h1 class="appointment-title">Make An Appointment</h1></div>
+        <div class="main-outer row">
+            <div class="col">
+
                 @if(session()->has('message'))
                 <div class="alert alert-success text-center">
                         {{session()->get('message')}}
@@ -13,37 +28,42 @@
 
                                 @csrf
 
-                                <div class="mb-3">
-                                        <label for="exampleFormControlInput1" class="form-label">name</label>
+                                <div class="mb-2">
+                                        <label for="exampleFormControlInput1" class="form-label">Name</label>
                                         <input type="text" class="form-control" name="name" id="name">
                                 </div>
-                                <div class="mb-3">
-                                        <label for="exampleFormControlInput1" class="form-label">email</label>
+                                <div class="mb-2">
+                                        <label for="exampleFormControlInput1" class="form-label">E-mail</label>
                                         <input type="email" class="form-control" id="email" name="email">
                                 </div>
-                                <div class="mb-3">
-                                        <label for="exampleFormControlInput1" class="form-label">address</label>
+                                <div class="mb-2">
+                                        <label for="exampleFormControlInput1" class="form-label">Address</label>
                                         <input type="text" class="form-control" id="address" name="address">
                                 </div>
-                                <div class="mb-3">
+                                <div class="mb-2">
                                         <label for="exampleFormControlInput1" class="form-label">Phone</label>
                                         <input type="number" class="form-control" id="phone" name="phone">
                                 </div>
-                                <div class="mb-3">
+                                <div class="mb-2">
                                         <label for="exampleFormControlInput1" class="form-label">Doctor Name</label>
                                         <input type="text" class="form-control" id="doctor_name" name="doctor_name">
                                 </div>
-                                <div class="mb-3">
+                                <div class="mb-2">
                                         <label for="exampleFormControlInput1" class="form-label">Date</label>
                                         <input type="date" class="form-control" id="date" name="date">
                                 </div>
-                                <div class="mb-3">
+                                <div class="mb-2">
                                         <label for="exampleFormControlTextarea1" class="form-label">Message</label>
-                                        <textarea class="form-control" id="message" name="message" rows="8"></textarea>
+                                        <textarea class="form-control" id="message" name="message" rows="1"></textarea>
                                 </div>
 
                                 <button type="submit" class="btn btn-success">Submit</button>
                         </form>
                 </div>
+            </div>
+            <div class="col">
+                <div class="doctor-app-image"></div>
+            </div>
+
         </div>
 </div>

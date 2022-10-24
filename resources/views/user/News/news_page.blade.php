@@ -38,14 +38,19 @@
 
         }
         .news-title-text{
+            font-family: Ubuntu;
             color: blue;
             font-weight: 900;
+        }
+        .news-navbar{
+            background-color: #ccddff;
+
         }
     </style>
 </head>
 <body>
 {{--------------------------------news navbar-------------------------------------------}}
-<nav class="navbar navbar-expand-lg bg-light">
+<nav class="navbar navbar-expand-lg news-navbar">
     <div class="container-fluid">
         <a class="navbar-brand" href="#">
             <img src="images/logo.png" alt="Logo" width="50px">
@@ -57,23 +62,18 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">
-                        <button class="btn btn-outline-primary">Covid News</button>
+                    <a class="nav-link active" aria-current="page" href="#local-news">
+                        <button class="btn btn-outline-primary">Local News</button>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">
-                        <button class="btn btn-outline-primary">Covid News</button>
+                    <a class="nav-link active" aria-current="page" href="#global-news">
+                        <button class="btn btn-outline-primary">Global News</button>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">
-                        <button class="btn btn-outline-primary">Covid News</button>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">
-                        <button class="btn btn-outline-primary">Covid News</button>
+                    <a class="nav-link active" aria-current="page" href="{{route('userDashBoard')}}">
+                        <button class="btn btn-outline-primary">Dash Board</button>
                     </a>
                 </li>
             </ul>
@@ -205,7 +205,7 @@
         </div>
     </div>
 
-    <div class="row title-row mt-5">
+    <div class="row title-row mt-5" id="local-news">
         <h1 class="news-title-text">Local Covid News</h1>
     </div>
     <div class="row local-news-row">
@@ -216,7 +216,7 @@
             @include('user.News.news_page_local-contacts')
         </div>
     </div>
-    <div class="row title-row mt-5">
+    <div class="row title-row mt-5" id="global-news">
         <h1 class="news-title-text">Global Covid News</h1>
     </div>
 

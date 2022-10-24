@@ -14,6 +14,7 @@
             position: sticky;
             top: 0;
             z-index: 1000;
+            background-color: #ccddff;
         }
 
         .nav-link {
@@ -57,7 +58,7 @@
     </style>
 </head>
 <body>
-<nav class="navbar navbar-expand-lg bg-light">
+<nav class="navbar navbar-expand-lg navibar">
     <div class="container-fluid">
         <a class="navbar-brand" href="{{route('main_page')}}"><img src="images/logo.png" class="logo-image" alt="logo"
                                                                    width="50px"></a>
@@ -77,13 +78,16 @@
                     <a class="nav-link" href="{{route('vaccination_appointments')}}">Vaccination Appointment</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{route('my_appointment')}}">Doctor Appointment</a>
+                    <a class="nav-link" href="{{route('appointmentpage')}}">Doctor Appointment</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="{{route('news_page')}}">News</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link vac-card" href="{{route('vaccination_card')}}" >Vaccination Card</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link vac-card" href="{{route('userDashBoard')}}">Dash Board</a>
                 </li>
             </ul>
             @if(Route::has('login'))
