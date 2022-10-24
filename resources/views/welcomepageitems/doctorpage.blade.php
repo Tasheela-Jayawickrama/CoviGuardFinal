@@ -1,50 +1,54 @@
-<!doctype html>
-<html lang="en">
-<head>
-    @include('layouts.all-css')
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
-        .btn-primary{
-            width: 200px;
-        }
-        .card{
-            box-shadow: 0 0 10px black;
-            margin: 20px;
-        }
-        .title{
-            color: darkblue;
-            font-weight: 900;
-            font-size: 50px;
-            font-family: Ubuntu, serif;
-        }
-        .home-outer{
-            display: flex;
-        }
-        .card-img-top{
-            width: 100%;
-            height: 170px;
-        }
-    </style>
-</head>
-<body>
-<div class="container">
-    <h1 class="title text-center">Doctors</h1>
-    <div class="home-outer">
-        @foreach($doctors as $doctor)
-            <div class="card" style="width: 18rem;">
-                <img src="doctorimage/{{$doctor->image}}" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <i class="fa-solid fa-house-user"></i><p class="card-title">{{$doctor->name}}</p>
-                    <i class="fa-solid fa-envelope-circle-check"></i><p class="card-text">{{$doctor->email}}</p>
-                    <i class="fa-solid fa-blender-phone"></i><p class="card-text">{{$doctor->phone}}</p>
-                    <p>{{$doctor->speciality}}</p>
-                    <div class="btn-area">
-                        <button class="btn btn-primary">Contact Doctor</button>
-                    </div>
-                </div>
-            </div>
-        @endforeach
-    </div>
-</body>
-</html>
+{{-- Welcome page styles --}}
 
+@include('layouts.welcome-page-styles')
+
+<section id="doctors">
+    <div class="doctor-page-outer">
+        <div class="page-title text-center">
+            <h1>Doctors</h1>
+        </div>
+        <div class="text-center"><i class="fa-solid fa-user-doctor"></i></div>
+        <div class="main-content">
+            <div class="doc-area">
+                <section class="doc">
+                    <button class="pre-btn"><i class="fa-solid fa-caret-left"></i></button>
+                    <button class="nxt-btn"><i class="fa-solid fa-caret-right"></i></button>
+                    <div class="doc-container">
+                        @foreach($doctors as $doctor)
+                            <div class="doc-card">
+                                <div class="doc-image">
+                                    <img src="doctorimage/{{$doctor->image}}" class="card-img-top" alt="...">
+                                </div>
+                                <div class="doc-info">
+                                    <h2 class="doc-name">{{$doctor->name}}</h2>
+                                    <p class="doc-short-description">{{$doctor->email}}</p>
+                                    <p class="doc-short-description">{{$doctor->phone}}</p>
+                                    <p class="doc-short-description">{{$doctor->speciality}}</p>
+                                </div>
+                            </div>
+                        @endforeach
+                    </div>
+                </section>
+            </div>
+
+        </div>
+    </div>
+</section>
+<script>
+    const productContainers = [...document.querySelectorAll('.doc-container')];
+    const nxtBtn = [...document.querySelectorAll('.nxt-btn')];
+    const preBtn = [...document.querySelectorAll('.pre-btn')];
+
+    productContainers.forEach((item, i) => {
+        let containerDimensions = item.getBoundingClientRect();
+        let containerWidth = containerDimensions.width;
+
+        nxtBtn[i].addEventListener('click', () => {
+            item.scrollLeft += containerWidth;
+        })
+
+        preBtn[i].addEventListener('click', () => {
+            item.scrollLeft -= containerWidth;
+        })
+    })
+</script>

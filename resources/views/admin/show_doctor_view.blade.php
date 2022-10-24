@@ -5,7 +5,6 @@
             padding: 5px 30px;
             border-bottom: 1px solid black;
         }
-
         .fa-solid {
             font-size: 30px;
         }
@@ -45,6 +44,8 @@
                     <td>{{$doctor->doctor_id}}</td>
                     <td><a href="{{route('update_doctor',$doctor->id)}}"><i class="fa-solid fa-address-book"></i></a>
                     </td>
+
+                    {{-- Delete Doctor and Delete Confirmation with JS Alert --}}
                     <td><a href="{{route('delete_doctor',$doctor->id)}}" onclick="return confirm('Are You Sure')"><i
                                 class="fa-solid fa-trash-can"></i></a></td>
                 </tr>

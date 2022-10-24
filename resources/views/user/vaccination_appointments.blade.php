@@ -22,24 +22,35 @@
 
         .vaccinationid-inner {
             width: 100%;
-            height: 100%;
+            height: 80vh;
             display: flex;
             align-items: center;
             justify-content: center;
             flex-direction: column;
+            background-image:url('images/vaccination_appointmentpage_image.png');
+            background-position: center;
+            background-size: cover;
+            margin-left: 40px;
         }
 
         .vac-id {
             font-size: 70px;
             font-weight: 900;
+            color: darkblue;
+        }
+        .appointment-title{
+            font-weight: 900;
+            color: darkblue;
         }
     </style>
 </head>
 <body>
 <div class="container">
+    <div class="row"><h1 class="text-center appointment-title">Make An Appointment For Vaccination</h1></div>
     <div class="main-outer">
+
         <div class="form-inner">
-            <h1 class="text-center">Make An Appointment For Vaccination</h1>
+
             @if(session()->has('message'))
                 <div class="alert alert-success text-center">
                     {{session()->get('message')}}
@@ -51,12 +62,12 @@
 
                     @csrf
 
-                    <div class="mb-3">
+                    <div class="mb-2">
                         <label for="exampleFormControlInput1" class="form-label">Name</label>
                         <input type="text" class="form-control" name="name" id="name" placeholder="Enter your full name"
                                required>
                     </div>
-                    <div class="mb-3">
+                    <div class="mb-2">
                         <label for="exampleFormControlInput1" class="form-label">Email</label>
                         <input type="email" class="form-control" id="email" name="email" placeholder="Email" required>
                     </div>
@@ -113,7 +124,7 @@
                         </div>
                     </div>
                     <br>
-                    <div class="mb-3">
+                    <div class="mb-2">
                         <label for="exampleFormControlInput1" class="form-label">Self Test Results</label>
                         <a href="{{route('lung_test')}}">Click here to test your-self</a>
                         <select class="form-select" aria-label="Default select example" name="test_result" required>

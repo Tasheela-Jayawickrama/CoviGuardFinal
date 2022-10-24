@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\NewsPageController;
 use App\Http\Controllers\WelcomeController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
@@ -78,3 +79,4 @@ Route::get('/contact_details', [ContactController::class, 'userContacts'])->name
 Route::get('/chat',[ChatController::class,'chatOption'])->name('chat-option');
 Route::post('/chat',[ChatController::class,'chatApplication'])->name('chat-application');
 
+Route::get('/news',[NewsPageController::class,'newsPage'])->name('news_page');

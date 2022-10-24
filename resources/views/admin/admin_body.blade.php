@@ -6,6 +6,8 @@
     <link rel="icon" href="images/logo.png">
     <title>Admin</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    {{-- Main Admin page styles --}}
     <style>
         .navbar a{
             color: white;
@@ -82,6 +84,8 @@
     </style>
 </head>
 <body>
+
+    {{-- Nav bar --}}
 <nav class="navbar navbar-expand-lg bg-dark">
     <div class="container-fluid">
         <a class="navbar-brand" href="{{route('main_page')}}"><img src="images/logo.png" class="logo-image" alt="logo"
@@ -130,6 +134,8 @@
     </div>
     </div>
 </nav>
+
+{{-- Side bar --}}
 
 <div class="sidebar bg-dark">
     <a href="{{route('add_doctor_view')}}"><i class="fa-solid fa-caret-right"></i>Add Doctors</a>

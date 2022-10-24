@@ -1,50 +1,50 @@
 @include('Chatify::layouts.headLinks')
 @include('layouts.all-css')
 
-<nav class="navbar navbar-expand-lg bg-light" style="position: sticky; top: 0; z-index: 3000;">
-    <div class="container-fluid">
-        <a class="navbar-brand" href="{{route('main_page')}}"><img src="images/logo.png" class="logo-image" alt="logo" width="50px"></a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#"></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#"></a>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+{{--<nav class="navbar navbar-expand-lg bg-light" style="position: sticky; top: 0; z-index: 3000;">--}}
+{{--    <div class="container-fluid">--}}
+{{--        <a class="navbar-brand" href="{{route('main_page')}}"><img src="images/logo.png" class="logo-image" alt="logo" width="50px"></a>--}}
+{{--        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">--}}
+{{--            <span class="navbar-toggler-icon"></span>--}}
+{{--        </button>--}}
+{{--        <div class="collapse navbar-collapse" id="navbarSupportedContent">--}}
+{{--            <ul class="navbar-nav me-auto mb-2 mb-lg-0">--}}
+{{--                <li class="nav-item">--}}
+{{--                    <a class="nav-link active" aria-current="page" href="#"></a>--}}
+{{--                </li>--}}
+{{--                <li class="nav-item">--}}
+{{--                    <a class="nav-link" href="#"></a>--}}
+{{--                </li>--}}
+{{--                <li class="nav-item dropdown">--}}
+{{--                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">--}}
 
-                    </a>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">Action</a></li>
-                        <li><a class="dropdown-item" href="#">Another action</a></li>
-                        <li><hr class="dropdown-divider"></li>
-                        <li><a class="dropdown-item" href="#">Something else here</a></li>
-                    </ul>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link disabled"></a>
-                </li>
-            </ul>
-            <form class="d-flex" role="search">
-                @if(Route::has('login'))
-                    <x-app-layout></x-app-layout>
-                @endif
-            </form>
-        </div>
-    </div>
-</nav>
+{{--                    </a>--}}
+{{--                    <ul class="dropdown-menu">--}}
+{{--                        <li><a class="dropdown-item" href="#">Action</a></li>--}}
+{{--                        <li><a class="dropdown-item" href="#">Another action</a></li>--}}
+{{--                        <li><hr class="dropdown-divider"></li>--}}
+{{--                        <li><a class="dropdown-item" href="#">Something else here</a></li>--}}
+{{--                    </ul>--}}
+{{--                </li>--}}
+{{--                <li class="nav-item">--}}
+{{--                    <a class="nav-link disabled"></a>--}}
+{{--                </li>--}}
+{{--            </ul>--}}
+{{--            <form class="d-flex" role="search">--}}
+{{--                @if(Route::has('login'))--}}
+{{--                    <x-app-layout></x-app-layout>--}}
+{{--                @endif--}}
+{{--            </form>--}}
+{{--        </div>--}}
+{{--    </div>--}}
+{{--</nav>--}}
 <div class="messenger">
     {{-- ----------------------Users/Groups lists side---------------------- --}}
     <div class="messenger-listView">
         {{-- Header and search bar --}}
         <div class="m-header">
             <nav>
-                <a href="#"><i class="fas fa-inbox"></i> <span class="messenger-headTitle">MESSAGES</span> </a>
+                <a href="#"><i class="fas fa-inbox"></i></a>
                 {{-- header buttons --}}
                 <nav class="m-header-right">
                     <a href="#"><i class="fas fa-cog settings-btn"></i></a>
@@ -108,8 +108,7 @@
                 {{-- header back button, avatar and user name --}}
                 <div class="chatify-d-flex chatify-justify-content-between chatify-align-items-center">
                     <a href="#" class="show-listView"><i class="fas fa-arrow-left"></i></a>
-                    <div class="avatar av-s header-avatar" style="margin: 0px 10px; margin-top: -5px; margin-bottom: -5px;">
-                    </div>
+                    <div class="avatar av-s header-avatar" style="margin: 0px 10px; margin-top: -5px; margin-bottom: -5px;"></div>
                     <a href="#" class="user-name">{{ config('chatify.name') }}</a>
                 </div>
                 {{-- header buttons --}}
@@ -148,13 +147,13 @@
         </div>
     </div>
     {{-- ---------------------- Info side ---------------------- --}}
-    <div class="messenger-infoView app-scroll">
-        {{-- nav actions --}}
-        <nav>
-            <a href="#"><i class="fas fa-times"></i></a>
-        </nav>
-        {!! view('Chatify::layouts.info')->render() !!}
-    </div>
+{{--    <div class="messenger-infoView app-scroll">--}}
+{{--        --}}{{-- nav actions --}}
+{{--        <nav>--}}
+{{--            <a href="#"><i class="fas fa-times"></i></a>--}}
+{{--        </nav>--}}
+{{--        {!! view('Chatify::layouts.info')->render() !!}--}}
+{{--    </div>--}}
 </div>
 
 @include('Chatify::layouts.modals')

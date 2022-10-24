@@ -40,7 +40,7 @@
 
     <div class="main-outer">
         <table>
-            <thead class="thead-dark">
+            <thead class="thead-dark"  style="position: sticky; top: 80px; border: none">
 
             <tr>
                 <th>Name</th>
@@ -49,6 +49,8 @@
                 <th>Date</th>
                 <th>Vaccination Date</th>
                 <th>Center</th>
+                <th>Approve</th>
+                <th>Delete</th>
             </tr>
 
             </thead>

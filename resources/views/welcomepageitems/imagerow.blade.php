@@ -20,7 +20,7 @@
         }
 
         .image-box {
-            width: 450px;
+            width: 370px;
             height: 210px;
             box-shadow: 0 0 10px black;
             margin: 5px;
@@ -74,21 +74,33 @@
         .image-box:hover {
             cursor: pointer;
         }
+        .icon-row .fa-solid{
+            font-size: 35px;
+            color: blue;
+            margin: 5px;
+        }
 
     </style>
 </head>
 <body>
+<div class="icon-row text-center">
+    <i class="fa-solid fa-virus-covid"></i>
+    <i class="fa-solid fa-lungs-virus"></i>
+    <i class="fa-solid fa-head-side-virus"></i>
+    <i class="fa-solid fa-head-side-mask"></i>
+    <i class="fa-solid fa-shield-virus"></i>
+</div>
 <div class="image-row">
-    <div class="row">
-        <div class="col-lg-12 col-md-8 col-sm-6 inner">
+    <div class="img-all">
+        <div class="inner">
             <div class="image-box box1"> Virus Spreading Whole Over The World</div>
             <div class="image-box box2">Wear A Mask Everytime</div>
-            <div class="image-box box3">Get Vaccined As Soon As Possible</div>
+            <div class="image-box box3">Get Vaccine As Soon As Possible</div>
             <div class="image-box box4">Use A Sanitizer</div>
         </div>
     </div>
-    <div class="row">
-        <div class="col-lg-12 col-md-8 col-sm-6 inner">
+    <div class="img-all">
+        <div class="inner">
             <div class="image-box box5">Get Medicine. Protect Your-Self</div>
             <div class="image-box box6">Corona Virus</div>
             <div class="image-box box7">Corona Virus</div>
