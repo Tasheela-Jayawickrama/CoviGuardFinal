@@ -1,8 +1,8 @@
 @include('layouts.welcome-page-styles')
 <section id="home">
     <div class="home-page-outer">
-        <div class="page-title text-center">
-            <h1></h1>
+        <div class="virus-balls">
+            
         </div>
         <i class="fa-solid fa-house text-center"></i>
         <div class="main-content">
