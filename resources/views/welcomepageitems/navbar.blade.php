@@ -29,7 +29,7 @@
         width: 100px;
     }
 
-    .btn a {
+    .naviBtn {
         color: white;
         text-transform: uppercase;
         text-decoration: none;
@@ -109,8 +109,8 @@
                     @endif
                 @else
                     <div class="nav-buttons">
-                        <button class=" btn btn-primary"><a href="{{ route('register') }}">register</a></button>
-                        <button class=" btn btn-info"><a href="{{ route('login') }}">login</a></button>
+                        <a href="{{ route('register') }}"><button class=" btn btn-primary naviBtn">register</button></a>
+                        <a href="{{ route('login') }}"><button class=" btn btn-info naviBtn">login</button></a>
                     </div>
                 @endauth
             @endif

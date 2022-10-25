@@ -144,6 +144,10 @@
         .all {
             margin: 5px;
         }
+        .reg-btns,
+        .login-btns{
+            width: 100%;
+        }
 
     </style>
 </head>
@@ -169,6 +173,7 @@
         </div>
         <div class="right-side">
             <div class="form-area">
+
                 <form action="" method="post">
 
                     @if (Session::get('success'))
@@ -183,68 +188,48 @@
                     @endif
                     @csrf
                     <h2 class="text-center title">Register</h2> <br>
-                    <div class="row">
-                        <div class="col-12 all">
-                            <input type="text" class="form-control" placeholder="First name" name="name"
-                                   aria-label="name" value="{{ old('name') }}">
-                            <span class="text-danger error">@error('name'){{ $message }}  @enderror</span>
+                    <div class="row g-3">
+
+                        <div class="col-12">
+                            <input type="text" class="form-control" id="fullName" placeholder="Full Name" name="name">
                         </div>
-                        <div class="col-12 all">
-                            <input type="text" class="form-control" placeholder="email" name="email"
-                                   aria-label="email" value="{{ old('email') }}">
-                            <span class="text-danger error">@error('email'){{ $message }}  @enderror</span>
+                        <div class="col-12">
+                            <input type="email" class="form-control" id="email" placeholder="E-mail" name="email">
                         </div>
-                        <div class="col-12 all">
-                            <input type="text" class="form-control" placeholder="address" name="address"
-                                   value="{{ old('address') }}">
-                            <span class="text-danger error">@error('address'){{ $message }}  @enderror</span>
+                        <div class="col-12">
+                            <input type="text" class="form-control" id="inputAddress" placeholder="Address" name="address">
                         </div>
-                    </div>
-                        <div class="row">
-                            <div class="col all">
-                                <input type="text" class="form-control" placeholder="Identity" aria-label="identity"
-                                       name="nic">
-                                <span class="text-danger error">@error('nic'){{ $message }}  @enderror</span>
-                            </div>
-                            <div class="col all">
-                                <input type="date" class="form-control" placeholder="Phone" aria-label="dob"
-                                       name="dob">
-                                <span class="text-danger error">@error('dob'){{ $message }}  @enderror</span>
-                            </div>
+                        <div class="col-md-6">
+                            <input type="text" class="form-control" id="identity" name="nic" placeholder="Identity">
                         </div>
-                        <div class="row">
-                            <div class="col all">
-                                <input type="text" class="form-control" placeholder="Phone" aria-label="phone"
-                                       name="phone">
-                                <span class="text-danger error">@error('phone'){{ $message }}  @enderror</span>
-                            </div>
-                            <div class="col all">
-                                <select class="form-select" aria-label="gender" name="gender">
-                                    <option value="Male">Male</option>
-                                    <option value="Female">Female</option>
-                                </select>
-                            </div>
+                        <div class="col-md-6">
+                            <input type="date" class="form-control" id="dob" name="dob" placeholder="DOB">
                         </div>
-                        <div class="row">
-                            <div class="col all">
-                                <input type="text" class="form-control" placeholder="Password" name="password"
-                                       aria-label="Password">
-                                <span class="text-danger error">@error('password'){{ $message }}  @enderror</span>
-                            </div>
-                            <div class="col all">
-                                <input type="text" class="form-control" placeholder="Confirm-Password"
-                                       name="password_confirmation" aria-label="Confirm-Password">
-                                <span
-                                    class="text-danger error">@error('password_confirmation'){{ $message }}  @enderror</span>
-                            </div>
+                        <div class="col-md-6">
+                            <input type="number" class="form-control" id="phone" name="phone" placeholder="Mobile">
                         </div>
-                    <br>
-                    <div class="d-grid gap-2 col-6 mx-auto">
-                        <button class="btn btn-success btns" type="submit">Register</button>
+                        <div class="col-md-6">
+                            <select id="gender" class="form-select" name="gender">
+                                <option selected disabled>--select--</option>
+                                <option value="Male">Male</option>
+                                <option value="Female">Female</option>
+                                <option value="Other">Other</option>
+                            </select>
+                        </div>
+                        <div class="col-md-6">
+                            <input type="password" class="form-control" id="dob" name="password" placeholder="Password">
+                        </div>
+                        <div class="col-md-6">
+                            <input type="password" class="form-control" id="dob" name="password_confirmation" placeholder="Confirm Password">
+                        </div>
+                        <div class="col-12">
+                            <button class="btn btn-success reg-btns" type="submit">Register</button>
+                        </div>
                         <div class="exists-acc">Already Have An Account?</div>
-                        <button class="btn btn-primary" type="button"><a href="{{ route('login') }}"
-                                                                         class="btns"> Login</a></button>
-                    </div>
+                        <div class="col-12">
+                            <a href="{{ route('login') }}"><button class="btn btn-primary login-btns" type="button">Login</button></a>
+
+                        </div>
                 </form>
             </div>
         </div>

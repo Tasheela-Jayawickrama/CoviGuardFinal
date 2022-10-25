@@ -7,7 +7,6 @@
         <div class="page-title text-center">
             <h1>Doctors</h1>
         </div>
-        <div class="text-center"><i class="fa-solid fa-user-doctor"></i></div>
         <div class="main-content">
             <div class="doc-area">
                 <section class="doc">

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,9 +8,10 @@
     <link rel="icon" href="images/logo.png" type="image/jpg">
     <title>Citizen Login</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
-          integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+
         .body-outer {
             width: 100%;
             height: 100vh;
@@ -49,7 +51,7 @@
             align-items: center;
             justify-content: center;
             width: 600px;
-            height: 600px;
+            height: 600px;s
         }
 
         .back {
@@ -95,18 +97,19 @@
 
         .form-control {
             font-weight: 300;
-            width: 300px;
         }
 
         .all {
             margin: 5px;
         }
+
         .title {
             color: blue;
             font-size: 45px;
             font-weight: 900;
         }
-        .button-area{
+
+        .button-area {
             width: 100%;
             height: 150px;
             display: flex;
@@ -115,8 +118,8 @@
             flex-direction: column;
         }
 
-        .btn{
-            width: 200px;
+        .btn {
+            width: 100%;
         }
 
         .exists-acc {
@@ -125,31 +128,41 @@
             font-weight: 900;
             color: blue;
         }
+        .login-form-area   {
+            padding: 0 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column
 
-
+        }
     </style>
 </head>
+
 <body>
-<div class="body-outer">
-    <div class="body-inner">
-        <div class="left-side">
-            <div class="back"><a href="{{route('main_page')}}"><img src="images/backarrow.svg" alt=""
-                                              class="backarrow"></a></div>
-            <div class="desc">
-                <div class="logo"><img src="images/logo.png" alt="" width="250px"></div>
-                <div class="name">
-                    <h4>Welcome to CoviGuard</h4>
+    <div class="body-outer">
+        <div class="body-inner">
+            <div class="left-side">
+                <div class="back"><a href="{{ route('main_page') }}"><img src="images/backarrow.svg" alt=""
+                            class="backarrow"></a></div>
+                <div class="desc">
+                    <div class="logo"><img src="images/logo.png" alt="" width="250px"></div>
+                    <div class="name">
+                        <h4>Welcome to CoviGuard</h4>
+                    </div>
+                </div>
+                <div class="buttons">
+                    <div class="helps">
+                        <p>Need any help?...</p>
+                    </div>
+                    <div class="help-buttons">
+                        <img src="images/phoneicon.png" alt="" width="50px">
+                        <img src="images/mailicon.png" alt="" width="50px">
+                    </div>
                 </div>
             </div>
-            <div class="buttons">
-                <div class="helps"><p>Need any help?...</p></div>
-                <div class="help-buttons">
-                    <img src="images/phoneicon.png" alt="" width="50px">
-                    <img src="images/mailicon.png" alt="" width="50px">
-                </div>
-            </div>
-        </div>
-        <div class="right-side">
+            <div class="right-side">
+                <div class="login-form-area">
                     @if (session('status'))
                         <div class="mb-4 font-medium text-sm text-green-600">
                             {{ session('status') }}
@@ -159,28 +172,36 @@
                     <form method="POST" action="{{ route('login') }}">
                         @csrf
                         <h2 class="text-center title">Login</h2> <br>
-                        <div class="col-12 all">
-                            <label for="identity" class="form-label">Your Identity</label>
-                            <input type="text" class="form-control" placeholder="Identity" name="nic"
-                                   aria-label="nic" value="{{ old('nic') }}" required>
-                            <span class="text-danger error">@error('nic'){{ $message }}  @enderror</span>
-                        </div>
-                        <div class="col-12 all">
-                            <label for="password" class="form-label">Your Password</label>
-                            <input type="password" class="form-control" placeholder="Password" name="password"
-                                   aria-label="password" value="{{ old('password') }}" required autocomplete="current-password">
-                            <span class="text-danger error">@error('password'){{ $message }}  @enderror</span>
-                        </div>
-                        <div class="button-area">
-                            <button type="submit" class="btn btn-success">Login</button>
-                            <p class="exists-acc">Don't have an Account?</p>
-                            <a href="{{route('register')}}"><button type="button" class="btn btn-primary">Register</button></a>
-                        </div>
 
+                        <div class="row g-3">
+                            <div class="col-12">
+                                <label for="identity" class="form-label">Your Identity Here</label>
+                                <input type="text" class="form-control" id="identity" placeholder="Identity"
+                                    name="nic">
+                            </div>
+                            <div class="col-12">
+                                <label for="password" class="form-label">Your Password Here</label>
+                                <input type="password" class="form-control" id="password" placeholder="E-mail"
+                                    name="password">
+                            </div>
+                            <div class="col-12">
+                                <button type="submit" class="btn btn-success">Login</button>
+                            </div>
+                            <div class="exists-acc">
+                                dont have an account?
+                            </div>
+                            <div class="col-12">
+                                <a href="{{ route('register') }}"><button type="button"
+                                        class="btn btn-primary">Register</button></a>
+                            </div>
+
+                        </div>
                     </form>
+                </div>
             </div>
         </div>
     </div>
-</div>
+    </div>
 </body>
+
 </html>

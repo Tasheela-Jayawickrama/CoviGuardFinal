@@ -7,12 +7,11 @@
         <div class="page-title text-center">
             <h1>Contact Us</h1>
         </div>
-        <div class="text-center"><i class="fa-solid fa-headset"></i></div>
         <div class="main-content">
             {{-- Contacts us page image --}}
 
             <div class="page-image">
-                <img src="./images/contact-us-image.jpg" alt="contacts-page-image" width="550px">
+                <img src="./images/contact-us-image.jpg" alt="contacts-page-image" width="500px" style="margin: 0 0 10px 150px">
             </div>
             {{-- Contacts us page Description --}}
 

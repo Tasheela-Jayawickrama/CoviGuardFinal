@@ -78,6 +78,12 @@
     .resource-page-boxes .card {
         margin: 5px;
     }
+    .resources-page-outer,
+    .faq-page-outer{
+        background-image: url('images/background2.png');
+        background-position: center;
+        background-size: cover;
+    }
     /*---------------------------------------Resource-page-styles-----------------------------------------*/
     /*---------------------------------------Doctor-page-styles-----------------------------------------*/
 
@@ -207,6 +213,27 @@
         color: blue;
         border-bottom: 5px solid black;
 
+    }
+
+    .small-boxes{
+        display: grid;
+        grid-template-columns: auto auto auto;
+    }
+
+    .resource-box{
+        width: 400px;
+        height: 200px;
+        box-shadow: 0 0 10px black;
+        margin: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        border-radius: 10px
+
+    }
+    .resource-box .fas{
+        font-size: 30px
     }
 
 
