@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
     <title>Covi Guard</title>
-    @include('user.usernavbar')
-    @include('layouts.all-css')
+    <?php echo $__env->make('user.usernavbar', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
+    <?php echo $__env->make('layouts.all-css', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
 
@@ -53,16 +53,17 @@
 
         <div class="form-inner">
 
-            @if(session()->has('message'))
+            <?php if(session()->has('message')): ?>
                 <div class="alert alert-success text-center">
-                    {{session()->get('message')}}
+                    <?php echo e(session()->get('message')); ?>
+
                 </div>
-            @endif
+            <?php endif; ?>
 
             <div class="form-outer">
-                <form action="{{route('vaccination_appointments_save')}}" method="post">
+                <form action="<?php echo e(route('vaccination_appointments_save')); ?>" method="post">
 
-                    @csrf
+                    <?php echo csrf_field(); ?>
 
                     <div class="mb-2">
                         <label for="exampleFormControlInput1" class="form-label">Name</label>
@@ -128,7 +129,7 @@
                     <br>
                     <div class="mb-2">
                         <label for="exampleFormControlInput1" class="form-label">Self Test Results</label>
-                        <a href="{{route('lung_test')}}">Click here to test your-self</a>
+                        <a href="<?php echo e(route('lung_test')); ?>">Click here to test your-self</a>
                         <select class="form-select" aria-label="Default select example" name="test_result" required>
                             <option value="------Select Your Self-Test Results------" selected disabled>choose</option>
                             <option value="Red" style="color: red;">Red</option>
@@ -164,14 +165,15 @@
             </div>
         </div>
         <div class="vaccinationid-inner">
-            @if(session()->has('vaccination_id'))
+            <?php if(session()->has('vaccination_id')): ?>
                 <div class="vac-id">
-                    {{session()->get('vaccination_id')}}
+                    <?php echo e(session()->get('vaccination_id')); ?>
+
                 </div>
                 <div class="vac-id-text">
                     <p>Please remember or write down this code for your vaccination purposes.</p>
                 </div>
-            @endif
+            <?php endif; ?>
         </div>
     </div>
 </div>
@@ -180,3 +182,4 @@
 </html>
 
 
+<?php /**PATH C:\xampp\htdocs\CoviGuardFinal\resources\views/user/vaccination_appointments.blade.php ENDPATH**/ ?>

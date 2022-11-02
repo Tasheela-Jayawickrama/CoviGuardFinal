@@ -63,7 +63,8 @@ class HomeController extends Controller
     //appointment page
     public function appointmentPage()
     {
-        return view('user.appointment');
+        $doctors = doctor::all();
+        return view('user.appointment', compact('doctors'));
     }
 
 

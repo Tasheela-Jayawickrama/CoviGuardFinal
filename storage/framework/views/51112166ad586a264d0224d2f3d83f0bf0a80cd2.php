@@ -463,13 +463,26 @@
 <header class="header">
 
     <nav class="navbar">
-        <a href="{{route('userDashBoard')}}">Dash Board</a>
+        <a href="<?php echo e(route('userDashBoard')); ?>">Dash Board</a>
         <a href="#symptoms">Symptoms</a>
         <a href="#doctors">doctors</a>
         <a href="#book">book</a>
     </nav>
     <div class="userbutton">
-        <x-app-layout></x-app-layout>
+        <?php if (isset($component)) { $__componentOriginal8e2ce59650f81721f93fef32250174d77c3531da = $component; } ?>
+<?php $component = App\View\Components\AppLayout::resolve([] + (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag ? (array) $attributes->getIterator() : [])); ?>
+<?php $component->withName('app-layout'); ?>
+<?php if ($component->shouldRender()): ?>
+<?php $__env->startComponent($component->resolveView(), $component->data()); ?>
+<?php if (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag && $constructor = (new ReflectionClass(App\View\Components\AppLayout::class))->getConstructor()): ?>
+<?php $attributes = $attributes->except(collect($constructor->getParameters())->map->getName()->all()); ?>
+<?php endif; ?>
+<?php $component->withAttributes([]); ?> <?php echo $__env->renderComponent(); ?>
+<?php endif; ?>
+<?php if (isset($__componentOriginal8e2ce59650f81721f93fef32250174d77c3531da)): ?>
+<?php $component = $__componentOriginal8e2ce59650f81721f93fef32250174d77c3531da; ?>
+<?php unset($__componentOriginal8e2ce59650f81721f93fef32250174d77c3531da); ?>
+<?php endif; ?>
     </div>
 
 
@@ -608,11 +621,11 @@
     <h1 class="heading"> our <span>doctors</span></h1>
 
     <div class="box-container">
-        @foreach($doctors as $doctor)
+        <?php $__currentLoopData = $doctors; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $doctor): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
             <div class="box">
-                <img src="doctorimage/{{$doctor->image}}" alt="">
-                <h3>{{$doctor->name}}</h3>
-                <span>{{$doctor->speciality}}</span>
+                <img src="doctorimage/<?php echo e($doctor->image); ?>" alt="">
+                <h3><?php echo e($doctor->name); ?></h3>
+                <span><?php echo e($doctor->speciality); ?></span>
                 <div class="share">
                     <a href="#" class="fab fa-facebook-f"></a>
                     <a href="#" class="fab fa-twitter"></a>
@@ -620,7 +633,7 @@
                     <a href="#" class="fab fa-linkedin"></a>
                 </div>
             </div>
-        @endforeach
+        <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
     </div>
 </section>
 
@@ -638,32 +651,32 @@
             <img src="/images/Online Doctor-cuate.svg" alt="">
         </div>
 
-        <form action="{{url('appointment')}}" method="POST">
+        <form action="<?php echo e(url('appointment')); ?>" method="POST">
 
-            @if (session('flush'))
+            <?php if(session('flush')): ?>
                 <div class="alert alert-primary note">
                     SuccessFully Send The Request
                 </div>
-            @endif
-            @csrf
+            <?php endif; ?>
+            <?php echo csrf_field(); ?>
 
             <h3>Make appointment</h3>
             <div class="row">
                 <div class="col-12">
                     <input type="text" class="form-control" placeholder="full name" aria-label="fullname"
-                           name="fullname" value="{{ old('fullname') }}" required>
+                           name="fullname" value="<?php echo e(old('fullname')); ?>" required>
                 </div>
             </div>
             <br>
             <div class="col-12">
                 <input type="text" class="form-control" id="email" placeholder="E-mail" name="email"
-                       value="{{ old('email') }}" required>
+                       value="<?php echo e(old('email')); ?>" required>
             </div>
             <br>
             <div class="row">
                 <div class="col">
                     <input type="text" class="form-control" placeholder="address" aria-label="nic " name="nic"
-                           value="{{ old('address') }}" required>
+                           value="<?php echo e(old('address')); ?>" required>
                 </div>
                 <div class="col">
                     <input type="number" class="form-control" id="phone" placeholder="phone" name="phone" required>
@@ -673,7 +686,7 @@
 
             <div class="col-12">
                 <input type="text" class="form-control" id="doctor_name" placeholder="doctor" name="doctor_name"
-                       value="{{ old('doctor_name') }}" required>
+                       value="<?php echo e(old('doctor_name')); ?>" required>
             </div>
             <br>
             <div class="row">
@@ -700,54 +713,54 @@
 
 <!-- review section starts  -->
 
-{{--        <section class="review" id="review">--}}
 
-{{--                <h1 class="heading"> Patient's <span>review</span> </h1>--}}
 
-{{--                <div class="box-container">--}}
 
-{{--                        <div class="box">--}}
-{{--                                <img src="/images/pic-1.png" alt="">--}}
-{{--                                <h3>Ishan</h3>--}}
-{{--                                <div class="stars">--}}
-{{--                                        <i class="fas fa-star"></i>--}}
-{{--                                        <i class="fas fa-star"></i>--}}
-{{--                                        <i class="fas fa-star"></i>--}}
-{{--                                        <i class="fas fa-star"></i>--}}
-{{--                                        <i class="fas fa-star-half-alt"></i>--}}
-{{--                                </div>--}}
-{{--                                <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam sapiente nihil aperiam? Repellat sequi nisi aliquid perspiciatis libero nobis rem numquam nesciunt alias sapiente minus voluptatem, reiciendis consequuntur optio dolorem!</p>--}}
-{{--                        </div>--}}
 
-{{--                        <div class="box">--}}
-{{--                                <img src="/images/pic-1.png" alt="">--}}
-{{--                                <h3>Gayan</h3>--}}
-{{--                                <div class="stars">--}}
-{{--                                        <i class="fas fa-star"></i>--}}
-{{--                                        <i class="fas fa-star"></i>--}}
-{{--                                        <i class="fas fa-star"></i>--}}
-{{--                                        <i class="fas fa-star"></i>--}}
-{{--                                        <i class="fas fa-star-half-alt"></i>--}}
-{{--                                </div>--}}
-{{--                                <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam sapiente nihil aperiam? Repellat sequi nisi aliquid perspiciatis libero nobis rem numquam nesciunt alias sapiente minus voluptatem, reiciendis consequuntur optio dolorem!</p>--}}
-{{--                        </div>--}}
 
-{{--                        <div class="box">--}}
-{{--                                <img src="/images/pic-3.png" alt="">--}}
-{{--                                <h3>Bhashitha</h3>--}}
-{{--                                <div class="stars">--}}
-{{--                                        <i class="fas fa-star"></i>--}}
-{{--                                        <i class="fas fa-star"></i>--}}
-{{--                                        <i class="fas fa-star"></i>--}}
-{{--                                        <i class="fas fa-star"></i>--}}
-{{--                                        <i class="fas fa-star-half-alt"></i>--}}
-{{--                                </div>--}}
-{{--                                <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam sapiente nihil aperiam? Repellat sequi nisi aliquid perspiciatis libero nobis rem numquam nesciunt alias sapiente minus voluptatem, reiciendis consequuntur optio dolorem!</p>--}}
-{{--                        </div>--}}
 
-{{--                </div>--}}
 
-{{--        </section>--}}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 <!-- review section ends -->
 
@@ -799,3 +812,4 @@
 </script>
 </body>
 </html>
+<?php /**PATH C:\xampp\htdocs\CoviGuardFinal\resources\views/user/symptomspage.blade.php ENDPATH**/ ?>

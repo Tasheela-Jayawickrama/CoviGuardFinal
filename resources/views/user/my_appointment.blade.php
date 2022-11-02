@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="en">
 <head>
+    <title>Covi Guard</title>
     @include('user.usernavbar')
     @include('layouts.all-css')
     <style>

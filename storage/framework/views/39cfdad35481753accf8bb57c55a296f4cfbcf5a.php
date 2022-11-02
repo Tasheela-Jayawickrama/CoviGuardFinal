@@ -325,10 +325,10 @@
             </div>
             <div class="timer">
                 <div class="back">
-                    <a href="{{route('userDashBoard')}}"><img src="/images/arrow-back.png" class="backarrow" tabindex="0" data-bs-toggle="popover" data-bs-trigger="hover focus" data-bs-content="Disabled popover"></a>
+                    <a href="<?php echo e(route('userDashBoard')); ?>"><img src="/images/arrow-back.png" class="backarrow" tabindex="0" data-bs-toggle="popover" data-bs-trigger="hover focus" data-bs-content="Disabled popover"></a>
                 </div>
                 <div class="back">
-                    <a href="{{route('vaccination_appointments')}}"><img src="/images/arrow-back.png" class="backarrow"></a>
+                    <a href="<?php echo e(route('vaccination_appointments')); ?>"><img src="/images/arrow-back.png" class="backarrow"></a>
                 </div>
                 <div class="left">
                     <div class="how-to-test">
@@ -536,3 +536,4 @@
 </script>
 </body>
 </html>
+<?php /**PATH C:\xampp\htdocs\CoviGuardFinal\resources\views/user/lung_test.blade.php ENDPATH**/ ?>

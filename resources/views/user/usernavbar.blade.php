@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="en">
 <head>
+    <title>Covi Guard</title>
     <link rel="icon" href="/images/logo.png">
     @include('layouts.all-css')
     <style>
