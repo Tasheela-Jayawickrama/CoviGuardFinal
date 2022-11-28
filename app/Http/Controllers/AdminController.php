@@ -19,7 +19,8 @@ class AdminController extends Controller
         $all_doctors = Doctor::count();
         $all_doctor_appointments = Appointment::count();
         $all_vaccination_appointments = VaccinationAppointment::count();
-        return view('admin.home', compact('all_users', 'all_doctors', 'all_doctor_appointments', 'all_vaccination_appointments')); // Add The retrived data to the afmin home page
+        $users_table = User::all();
+        return view('admin.home', compact('users_table','all_users', 'all_doctors', 'all_doctor_appointments', 'all_vaccination_appointments')); // Add The retrived data to the afmin home page
     }
 
     public function add_view()

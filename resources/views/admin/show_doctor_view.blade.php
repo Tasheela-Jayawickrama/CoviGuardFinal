@@ -19,8 +19,8 @@
     </style>
 <div class="content">
     <div class="main-outer">
-        <table>
-            <thead>
+        <table class="table">
+            <thead class="bg-dark text-light" style="position: sticky; top: 82px">
             <tr>
                 <th>Doctor Image</th>
                 <th>Name</th>
