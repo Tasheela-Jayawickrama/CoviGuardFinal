@@ -1,4 +1,4 @@
-@include('admin.admin_body')
+<?php echo $__env->make('admin.admin_body', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
 
     <!doctype html>
 <html lang="en">
@@ -94,11 +94,11 @@
 </head>
 <body>
 
-{{-- Admin Page Content --}}
+
 <div class="content content-home">
     <div class="row count">
 
-        {{-- All users count--}}
+        
         <div class="col">
             <div class="card card-user">
                 <div class="card-body">
@@ -106,13 +106,13 @@
                         <h5 class="card-title"><i class="fa-solid fa-user"></i></h5>
                         <h6 class="card-subtitle mb-2 ">Total Users</h6>
                     </div>
-                    <h1>{{ $all_users }}</h1>
+                    <h1><?php echo e($all_users); ?></h1>
                 </div>
 
             </div>
         </div>
 
-        {{-- All Doctors count --}}
+        
         <div class="col">
             <div class="card card-doctor">
                 <div class="card-body">
@@ -120,12 +120,12 @@
                         <h5 class="card-title"><i class="fa-solid fa-user-doctor"></i></h5>
                         <h6 class="card-subtitle mb-2 ">Total Doctors</h6>
                     </div>
-                    <h1>{{ $all_doctors }}</h1>
+                    <h1><?php echo e($all_doctors); ?></h1>
                 </div>
             </div>
         </div>
 
-        {{-- All Doctor appointments count --}}
+        
         <div class="col">
             <div class="card card-doc-app">
                 <div class="card-body">
@@ -135,12 +135,12 @@
                         </h5>
                         <h6 class="card-subtitle mb-2 ">Doctor Appointments</h6>
                     </div>
-                    <h1>{{ $all_doctor_appointments }}</h1>
+                    <h1><?php echo e($all_doctor_appointments); ?></h1>
                 </div>
             </div>
         </div>
 
-        {{-- All Vaccination appointments count --}}
+        
         <div class="col">
             <div class="card card-vac-app">
                 <div class="card-body">
@@ -150,14 +150,14 @@
                         </h5>
                         <h6 class="card-subtitle mb-2 ">Vaccination Appointments</h6>
                     </div>
-                    <h1>{{ $all_vaccination_appointments }}</h1>
+                    <h1><?php echo e($all_vaccination_appointments); ?></h1>
                 </div>
             </div>
         </div>
     </div>
     <div class="row my-4">
         <div class="col-4">
-            <form class="form-inline" type="get" action="{{ route('admin_dashboard') }}">
+            <form class="form-inline" type="get" action="<?php echo e(route('admin_dashboard')); ?>">
                 <input class="form-control mr-sm-2 rounded" type="search" placeholder="Search" aria-label="Search" name="query">
             </form>
 
@@ -181,16 +181,16 @@
                 </tr>
                 </thead>
                 <tbody style="font-size: 10px">
-                @foreach( $users_table  as $users)
+                <?php $__currentLoopData = $users_table; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $users): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
 
                     <tr>
-                        <td>{{ $users->name }}</td>
-                        <td>{{ $users->nic }}</td>
-                        <td>{{ $users->email }}</td>
-                        <td>{{ $users->phone }}</td>
-                        <td>{{ $users->address }}</td>
+                        <td><?php echo e($users->name); ?></td>
+                        <td><?php echo e($users->nic); ?></td>
+                        <td><?php echo e($users->email); ?></td>
+                        <td><?php echo e($users->phone); ?></td>
+                        <td><?php echo e($users->address); ?></td>
                     </tr>
-                    @endforeach
+                    <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                 </tbody>
             </table>
         </div>
@@ -199,3 +199,4 @@
 
 </body>
 </html>
+<?php /**PATH C:\laragon\www\CoviGuardFinal\resources\views/admin/home.blade.php ENDPATH**/ ?>

@@ -1,5 +1,5 @@
-@include('user.usernavbar')
-@include('layouts.all-css')
+<?php echo $__env->make('user.usernavbar', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
+<?php echo $__env->make('layouts.all-css', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
 <title>Covi Guard</title>
 <style>
     .doctor-app-image{
@@ -19,15 +19,16 @@
         <div class="main-outer row">
             <div class="col">
 
-                @if(session()->has('message'))
+                <?php if(session()->has('message')): ?>
                 <div class="alert alert-success text-center">
-                        {{session()->get('message')}}
-                </div>
-                @endif
-                <div class="form-outer">
-                        <form action="{{url('appointment')}}" method="post">
+                        <?php echo e(session()->get('message')); ?>
 
-                                @csrf
+                </div>
+                <?php endif; ?>
+                <div class="form-outer">
+                        <form action="<?php echo e(url('appointment')); ?>" method="post">
+
+                                <?php echo csrf_field(); ?>
 
                                 <div class="mb-2">
                                         <label for="exampleFormControlInput1" class="form-label">Name</label>
@@ -50,9 +51,9 @@
 
                                     <label>
                                         <select class="form-control">
-                                            @foreach($doctors as $doctor)
-                                            <option value="{{$doctor->doctor_name}}">{{$doctor->doctor_name}}</option>
-                                            @endforeach
+                                            <?php $__currentLoopData = $doctors; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $doctor): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                                            <option value="<?php echo e($doctor->doctor_name); ?>"><?php echo e($doctor->doctor_name); ?></option>
+                                            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                                         </select>
                                     </label>
 
@@ -78,3 +79,4 @@
 
         </div>
 </div>
+<?php /**PATH C:\laragon\www\CoviGuardFinal\resources\views/user/appointment.blade.php ENDPATH**/ ?>

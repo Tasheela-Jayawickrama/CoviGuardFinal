@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
     <title>Covi Guard</title>
-    @include('user.usernavbar')
-    @include('layouts.all-css')
+    <?php echo $__env->make('user.usernavbar', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
+    <?php echo $__env->make('layouts.all-css', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
         .container {
@@ -44,16 +44,16 @@
                 </tr>
                 </thead>
                 <tbody>
-                @foreach($appoint as $appoints)
+                <?php $__currentLoopData = $appoint; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $appoints): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                     <tr>
-                        <td>{{$appoints->doctor_name}}</td>
-                        <td>{{$appoints->date}}</td>
-                        <td class="message_box">{{$appoints->message}}</td>
-                        <td>{{$appoints->status}}</td>
-                        <td><a href="{{route('cancel_appoint',$appoints->id)}}" class="btn btn-danger"
+                        <td><?php echo e($appoints->doctor_name); ?></td>
+                        <td><?php echo e($appoints->date); ?></td>
+                        <td class="message_box"><?php echo e($appoints->message); ?></td>
+                        <td><?php echo e($appoints->status); ?></td>
+                        <td><a href="<?php echo e(route('cancel_appoint',$appoints->id)); ?>" class="btn btn-danger"
                                onclick="return confirm('are you Sure ?')">Cancel</a></td>
                     </tr>
-                @endforeach
+                <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                 </tbody>
             </table>
         </div>
@@ -63,3 +63,4 @@
 
 </body>
 </html>
+<?php /**PATH C:\laragon\www\CoviGuardFinal\resources\views/user/my_appointment.blade.php ENDPATH**/ ?>

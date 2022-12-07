@@ -71,7 +71,6 @@ Route::get('/vaccination_appointment', [AdminController::class, 'vaccinationAppo
 Route::post('/appointment_update/{id}', [AdminController::class, 'appointmentUpdate'])->name('appointment_update');
 Route::get('/delete_vaccination_appointment/{id}', [AdminController::class, 'cancelVaccinationAppoint'])->name('cancel_vaccination_appointment');
 
-
 Route::post('/contact_us', [ContactController::class, 'contactUs'])->name('contact_us');
 Route::get('/contact_details', [ContactController::class, 'userContacts'])->name('user_contacts');
 

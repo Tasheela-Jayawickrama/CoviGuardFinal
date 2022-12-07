@@ -23,6 +23,13 @@ class AdminController extends Controller
         return view('admin.home', compact('users_table','all_users', 'all_doctors', 'all_doctor_appointments', 'all_vaccination_appointments')); // Add The retrived data to the afmin home page
     }
 
+    public function searchUsers(){
+        $searchText = $_GET['query'];
+        $users = User::where('name','LIKE','%'.$searchText.'%')->get();
+        return view('admin.home',compact('users'));
+    }
+
+
     public function add_view()
     {
         return view('admin.add_doctor');
