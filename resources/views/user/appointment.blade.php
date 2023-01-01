@@ -2,79 +2,80 @@
 @include('layouts.all-css')
 <title>Covi Guard</title>
 <style>
-    .doctor-app-image{
+    .doctor-app-image {
         width: 700px;
         height: 100%;
         background-image: url('images/Doctor_appointment_page_image.png');
         background-size: cover;
         background-position: center;
     }
-    .appointment-title{
-            font-weight: 900;
-            color: darkblue
-        }
+
+    .appointment-title {
+        font-weight: 900;
+        color: darkblue
+    }
 </style>
 <div class="container">
     <div class="row text-center"><h1 class="appointment-title">Make An Appointment</h1></div>
-        <div class="main-outer row">
-            <div class="col">
+    <div class="main-outer row">
+        <div class="col">
 
-                @if(session()->has('message'))
+            @if(session()->has('message'))
                 <div class="alert alert-success text-center">
-                        {{session()->get('message')}}
+                    {{session()->get('message')}}
                 </div>
-                @endif
-                <div class="form-outer">
-                        <form action="{{url('appointment')}}" method="post">
+            @endif
+            <div class="form-outer">
+                <form action="{{url('appointment')}}" method="post">
 
-                                @csrf
+                    @csrf
 
-                                <div class="mb-2">
-                                        <label for="exampleFormControlInput1" class="form-label">Name</label>
-                                        <input type="text" class="form-control" name="name" id="name">
-                                </div>
-                                <div class="mb-2">
-                                        <label for="exampleFormControlInput1" class="form-label">E-mail</label>
-                                        <input type="email" class="form-control" id="email" name="email">
-                                </div>
-                                <div class="mb-2">
-                                        <label for="exampleFormControlInput1" class="form-label">Address</label>
-                                        <input type="text" class="form-control" id="address" name="address">
-                                </div>
-                                <div class="mb-2">
-                                        <label for="exampleFormControlInput1" class="form-label">Phone</label>
-                                        <input type="number" class="form-control" id="phone" name="phone">
-                                </div>
-                                <div class="mb-2">
-                                        <label for="exampleFormControlInput1" class="form-label">Doctor Name</label>
+                    <div class="mb-2">
+                        <label for="exampleFormControlInput1" class="form-label">Name</label>
+                        <input type="text" class="form-control" name="name" id="name">
+                    </div>
+                    <div class="mb-2">
+                        <label for="exampleFormControlInput1" class="form-label">E-mail</label>
+                        <input type="email" class="form-control" id="email" name="email">
+                    </div>
+                    <div class="mb-2">
+                        <label for="exampleFormControlInput1" class="form-label">Address</label>
+                        <input type="text" class="form-control" id="address" name="address">
+                    </div>
+                    <div class="mb-2">
+                        <label for="exampleFormControlInput1" class="form-label">Phone</label>
+                        <input type="number" class="form-control" id="phone" name="phone">
+                    </div>
+                    <div class="mb-2">
+                        <label for="exampleFormControlInput1" class="form-label">Doctor Name</label>
 
-                                    <label>
-                                        <select class="form-control">
-                                            @foreach($doctors as $doctor)
-                                            <option value="{{$doctor->doctor_name}}">{{$doctor->doctor_name}}</option>
-                                            @endforeach
-                                        </select>
-                                    </label>
+                        <label>
+                            <select class="form-control">
+                                @foreach($doctors as $doctor)
+                                    <option value="{{$doctor->doctor_name}}">{{$doctor->doctor_name}}</option>
+                                @endforeach
+                            </select>
+                        </label>
 
-                                </div>
-                                <div class="mb-2">
-                                        <label for="exampleFormControlInput1" class="form-label">Date</label>
-                                        <input type="date" class="form-control" id="date" name="date">
-                                </div>
-                                <div class="mb-2">
-                                        <label for="exampleFormControlTextarea1" class="form-label">Message</label>
-                                        <textarea class="form-control" id="message" name="message" rows="1"></textarea>
-                                </div>
-                                <div class="d-grid mt-2">
-                                    <button type="submit" class="btn btn-success">Submit</button>
-                                </div>
+                    </div>
+                    <div class="mb-2">
+                        <label for="exampleFormControlInput1" class="form-label">Date</label>
+                        <input type="date" class="form-control" id="date" name="date">
+                    </div>
+                    <div class="mb-2">
+                        <label for="exampleFormControlTextarea1" class="form-label">Message</label>
+                        <textarea class="form-control" id="message" name="message" rows="1"></textarea>
+                    </div>
+                    <div class="d-grid mt-2">
+                        <button type="submit" class="btn btn-success">Submit</button>
+                    </div>
 
-                        </form>
-                </div>
+                </form>
             </div>
-            <div class="col">
-                <div class="doctor-app-image"></div>
-            </div>
-
         </div>
+        <div class="col">
+            <div class="doctor-app-image"></div>
+        </div>
+
+    </div>
 </div>

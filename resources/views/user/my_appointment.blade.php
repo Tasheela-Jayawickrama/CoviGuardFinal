@@ -35,7 +35,7 @@
         <div class="table-outer">
             <table class="table">
                 <thead class="bg-dark text-light">
-                <tr style="">
+                <tr>
                     <th>Doctor Name</th>
                     <th>Date</th>
                     <th>Message</th>
@@ -45,7 +45,7 @@
                 </thead>
                 <tbody>
                 @foreach($appoint as $appoints)
-                    <tr>
+                    <tr >
                         <td>{{$appoints->doctor_name}}</td>
                         <td>{{$appoints->date}}</td>
                         <td class="message_box">{{$appoints->message}}</td>

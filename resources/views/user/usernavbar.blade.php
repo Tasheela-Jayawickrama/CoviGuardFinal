@@ -59,7 +59,7 @@
     </style>
 </head>
 <body>
-<nav class="navbar navbar-expand-lg navibar">
+<nav class="navbar navbar-expand-lg navibar bg-light text-dark">
     <div class="container-fluid">
         <a class="navbar-brand" href="{{route('main_page')}}"><img src="images/logo.png" class="logo-image" alt="logo"
                                                                    width="50px"></a>

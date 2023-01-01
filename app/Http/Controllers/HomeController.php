@@ -85,11 +85,8 @@ class HomeController extends Controller
         if (Auth::id()) {
             $data->user_id = Auth::user()->id;
         }
-
         $data->save();
-
         return redirect()->back()->with('message', 'Appointment Request Successfully. We Will Contact You Soon');
-
     }
 
 
@@ -107,11 +104,9 @@ class HomeController extends Controller
 
     public function cancel_appoint($id)
     {
-
         $data = appointment::find($id);
         $data->delete();
         return redirect()->back();
-
     }
 
     public function symptomsPage()
