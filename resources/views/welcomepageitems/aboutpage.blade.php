@@ -20,9 +20,7 @@
                 <button class="btn btn-primary about-btn">See More Details</button>
             </div>
             <div class="">
-
             </div>
         </div>
-
     </div>
 </section>

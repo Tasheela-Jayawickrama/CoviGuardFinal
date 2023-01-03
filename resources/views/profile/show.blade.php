@@ -1,5 +1,6 @@
 <x-app-layout>
-    <x-slot name="header">
+    <x-slot name="header" >
+        <x-app-layout></x-app-layout>
         <h2 class="font-semibold text-xl text-gray-50 leading-tight">
             {{ __('Change Your Profile') }}
         </h2>

@@ -20,10 +20,8 @@
                 <button class="btn btn-primary about-btn">See More Details</button>
             </div>
             <div class="">
-
             </div>
         </div>
-
     </div>
 </section>
 <?php /**PATH C:\laragon\www\CoviGuardFinal\resources\views/welcomepageitems/aboutpage.blade.php ENDPATH**/ ?>

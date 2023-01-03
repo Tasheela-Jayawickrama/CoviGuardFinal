@@ -453,6 +453,12 @@
 
         }
 
+        ::placeholder{
+            font-size: 15px;
+        }
+        .form-control 
+
+
     </style>
 
 </head>
@@ -663,41 +669,41 @@
             <h3>Make appointment</h3>
             <div class="row">
                 <div class="col-12">
-                    <input type="text" class="form-control" placeholder="full name" aria-label="fullname"
+                    <input type="text" class="form-control placeholder-text" placeholder="full name" aria-label="fullname"
                            name="fullname" value="<?php echo e(old('fullname')); ?>" required>
                 </div>
             </div>
             <br>
             <div class="col-12">
-                <input type="text" class="form-control" id="email" placeholder="E-mail" name="email"
+                <input type="text" class="form-control placeholder-text" id="email" placeholder="E-mail" name="email"
                        value="<?php echo e(old('email')); ?>" required>
             </div>
             <br>
             <div class="row">
                 <div class="col">
-                    <input type="text" class="form-control" placeholder="address" aria-label="nic " name="nic"
+                    <input type="text" class="form-control placeholder-text" placeholder="address" aria-label="nic " name="nic"
                            value="<?php echo e(old('address')); ?>" required>
                 </div>
                 <div class="col">
-                    <input type="number" class="form-control" id="phone" placeholder="phone" name="phone" required>
+                    <input type="number" class="form-control placeholder-text" id="phone" placeholder="phone" name="phone" required>
                 </div>
             </div>
             <br>
 
             <div class="col-12">
-                <input type="text" class="form-control" id="doctor_name" placeholder="doctor" name="doctor_name"
+                <input type="text" class="form-control placeholder-text" id="doctor_name" placeholder="doctor" name="doctor_name"
                        value="<?php echo e(old('doctor_name')); ?>" required>
             </div>
             <br>
             <div class="row">
                 <div class="col-12">
-                    <input type="date" class="form-control" placeholder="dd/mm/yyyy" aria-label="date" name="date">
+                    <input type="date" class="form-control placeholder-text" placeholder="dd/mm/yyyy" aria-label="date" name="date">
                 </div>
             </div>
             <br>
             <div class="row">
                 <div class="col-12">
-                    <textarea class="form-control" id="formcontroltextarea" rows="6" name="message"
+                    <textarea class="form-control placeholder-text" id="formcontroltextarea" rows="6" name="message"
                               placeholder="Your Text Here"></textarea>
                 </div>
             </div>
