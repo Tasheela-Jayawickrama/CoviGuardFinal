@@ -33,7 +33,7 @@
 <div class="container">
     <div class="main-outer">
         <div class="table-outer">
-            <table class="table">
+            <table class="table table-responsive">
                 <thead class="bg-dark text-light">
                 <tr>
                     <th>Doctor Name</th>
@@ -46,7 +46,7 @@
                 <tbody>
                 @foreach($appoint as $appoints)
                     <tr >
-                        <td>{{$appoints->doctor_name}}</td>
+                        <td>{{$appoints->name}}</td>
                         <td>{{$appoints->date}}</td>
                         <td class="message_box">{{$appoints->message}}</td>
                         <td>{{$appoints->status}}</td>

@@ -34,8 +34,11 @@
         font-size: 50px;
         font-weight: 900;
     }
+    .page-title{
+        margin-top: 50px;
+    }
     .page-title h1{
-        margin-top: 10px;
+        margin-top: 5px;
         font-size: 70px;
         color: darkblue;
         font-weight: 900;

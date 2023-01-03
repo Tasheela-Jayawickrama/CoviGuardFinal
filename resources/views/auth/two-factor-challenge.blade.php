@@ -129,7 +129,7 @@
                 <form method="POST" action="{{ route('two-factor.login') }}">
                     @csrf
 
-                    <h4 class="text-center">Use your microsoft authenticator app for login</h4>
+                    <h4 class="text-center">Use Your Google Authenticator App For Login</h4>
 
                     <div class="mb-3">
                         <label for="code" class="form-label">Code</label>

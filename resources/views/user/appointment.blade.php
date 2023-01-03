@@ -46,17 +46,17 @@
                         <label for="exampleFormControlInput1" class="form-label">Phone</label>
                         <input type="number" class="form-control" id="phone" name="phone">
                     </div>
-                    <div class="mb-2">
-                        <label for="exampleFormControlInput1" class="form-label">Doctor Name</label>
-
-                        <label>
-                            <select class="form-control">
-                                @foreach($doctors as $doctor)
-                                    <option value="{{$doctor->doctor_name}}">{{$doctor->doctor_name}}</option>
-                                @endforeach
-                            </select>
-                        </label>
-
+                    <div class="row">
+                        <div class="col-12 mb-2">
+                            <label for="exampleFormControlInput1" class="form-label">Doctor Name</label>
+                            <label>
+                                <select class="form-control">
+                                    @foreach($doctors as $doctor)
+                                        <option value="{{$doctor->name}}">{{$doctor->name}}</option>
+                                    @endforeach
+                                </select>
+                            </label>
+                        </div>
                     </div>
                     <div class="mb-2">
                         <label for="exampleFormControlInput1" class="form-label">Date</label>

@@ -33,7 +33,7 @@
 <div class="container">
     <div class="main-outer">
         <div class="table-outer">
-            <table class="table">
+            <table class="table table-responsive">
                 <thead class="bg-dark text-light">
                 <tr>
                     <th>Doctor Name</th>
@@ -46,7 +46,7 @@
                 <tbody>
                 <?php $__currentLoopData = $appoint; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $appoints): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                     <tr >
-                        <td><?php echo e($appoints->doctor_name); ?></td>
+                        <td><?php echo e($appoints->name); ?></td>
                         <td><?php echo e($appoints->date); ?></td>
                         <td class="message_box"><?php echo e($appoints->message); ?></td>
                         <td><?php echo e($appoints->status); ?></td>

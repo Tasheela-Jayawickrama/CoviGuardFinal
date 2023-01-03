@@ -28,7 +28,7 @@
 
                     <form action="<?php echo e(route('contact_us')); ?>" method="POST">
                         <?php echo csrf_field(); ?>
-                        <p class="text-center cuname">Contact Us 24/7</p>
+                        <p class="text-center cuname mb-5 fw-bold">Contact Us 24/7</p>
                         <div class="mb-3">
                             <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Name" name="name" required>
                         </div>
@@ -42,7 +42,7 @@
                             <textarea class="form-control" id="exampleFormControlTextarea1" rows="6" placeholder="Let us Know Your Comments" name="message" required></textarea>
                         </div>
                         <div class="mb-3">
-                            <button type="submit" class="btn btn-primary ">Sent Your Message</button>
+                            <button type="submit" class="btn btn-primary bg-primary text-light ">Sent Your Message</button>
                         </div>
                     </form>
                 </div>

@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\DoctorController;
 use App\Http\Controllers\NewsPageController;
 use App\Http\Controllers\WelcomeController;
 use Illuminate\Support\Facades\Route;
@@ -79,3 +80,6 @@ Route::get('/chat',[ChatController::class,'chatOption'])->name('chat-option');
 Route::post('/chat',[ChatController::class,'chatApplication'])->name('chat-application');
 
 Route::get('/news',[NewsPageController::class,'newsPage'])->name('news_page');
+
+
+Route::get('/doctors-controller',[DoctorController::class,'showDoctors'])->name('show-all-doctors');

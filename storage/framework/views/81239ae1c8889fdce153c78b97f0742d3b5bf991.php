@@ -182,7 +182,7 @@
                             </div>
                             <div class="col-12">
                                 <label for="password" class="form-label">Your Password Here</label>
-                                <input type="password" class="form-control" id="password" placeholder="E-mail"
+                                <input type="password" class="form-control" id="password" placeholder="Password"
                                     name="password">
                             </div>
                             <div class="col-12">

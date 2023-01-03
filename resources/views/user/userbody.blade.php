@@ -34,7 +34,7 @@
         }
 
         .fa-microscope {
-            color: yellow;
+            color: darkgoldenrod;
         }
 
         .fa-vial-virus {
@@ -144,6 +144,31 @@
             font-weight: 900;
             font-size: 10px
         }
+        .box .fa-solid:hover{
+            transform: scale(1.2);
+
+        }
+        .box:hover{
+            cursor: pointer;
+        }
+        .box-1:hover{
+            background-color: lightblue;
+        }
+        .box-2:hover{
+            background-color: greenyellow;
+        }
+        .box-3:hover{
+            background-color: lightcoral;
+        }
+        .box-4:hover{
+            background-color: lightsalmon;
+        }
+        .box-5:hover{
+            background-color: lightgreen;
+        }
+        .box-6:hover{
+            background-color: mediumpurple;
+        }
     </style>
 </head>
 
@@ -184,16 +209,16 @@
             <div class="main-box">
                 <div class="container text-center">
                     <div class="row">
-                        <div class="col box">
+                        <div class="col box box-1">
                             <h1>Symptoms</h1>
                             <a href="{{ route('symptoms') }}"><i class="fa-solid fa-puzzle-piece"></i></a>
                         </div>
-                        <div class="col box">
+                        <div class="col box box-2">
                             <h1>Testing Services</h1>
                             <a href="{{ route('lung_test') }}"><i class="fa-solid fa-microscope"></i></a>
 
                         </div>
-                        <div class="col box">
+                        <div class="col box box-3">
                             <h1>Vaccination Appointment</h1>
                             <a href="{{ route('vaccination_appointments') }}"><i
                                     class="fa-solid fa-vial-virus"></i></a>
@@ -201,15 +226,15 @@
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col box">
+                        <div class="col box box-4">
                             <h1>Contact Doctor</h1>
                             <a href="{{ route('appointmentpage') }}"><i class="fa-solid fa-stethoscope"></i></a>
                         </div>
-                        <div class="col box">
+                        <div class="col box box-5">
                             <h1>News</h1>
                             <a href="{{ route('news_page') }}"><i class="fa-solid fa-globe"></i></a>
                         </div>
-                        <div class="col box">
+                        <div class="col box box-6">
                             <h1>Chat With Us</h1>
                             <a href="{{ route('chatify') }}"><i class="fa-solid fa-comment-medical"></i></a>
                         </div>

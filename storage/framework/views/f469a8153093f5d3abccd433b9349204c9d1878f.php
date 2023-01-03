@@ -47,17 +47,17 @@
                         <label for="exampleFormControlInput1" class="form-label">Phone</label>
                         <input type="number" class="form-control" id="phone" name="phone">
                     </div>
-                    <div class="mb-2">
-                        <label for="exampleFormControlInput1" class="form-label">Doctor Name</label>
-
-                        <label>
-                            <select class="form-control">
-                                <?php $__currentLoopData = $doctors; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $doctor): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-                                    <option value="<?php echo e($doctor->doctor_name); ?>"><?php echo e($doctor->doctor_name); ?></option>
-                                <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
-                            </select>
-                        </label>
-
+                    <div class="row">
+                        <div class="col-12 mb-2">
+                            <label for="exampleFormControlInput1" class="form-label">Doctor Name</label>
+                            <label>
+                                <select class="form-control">
+                                    <?php $__currentLoopData = $doctors; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $doctor): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                                        <option value="<?php echo e($doctor->name); ?>"><?php echo e($doctor->name); ?></option>
+                                    <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+                                </select>
+                            </label>
+                        </div>
                     </div>
                     <div class="mb-2">
                         <label for="exampleFormControlInput1" class="form-label">Date</label>
