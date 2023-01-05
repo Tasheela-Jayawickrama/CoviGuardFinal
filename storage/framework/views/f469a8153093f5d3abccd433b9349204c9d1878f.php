@@ -18,7 +18,7 @@
 <div class="container">
     <div class="row text-center"><h1 class="appointment-title">Make An Appointment</h1></div>
     <div class="main-outer row">
-        <div class="col">
+        <div class="col-12 col-lg-6 col-md-12 col-sm-12">
 
             <?php if(session()->has('message')): ?>
                 <div class="alert alert-success text-center">
@@ -74,7 +74,7 @@
                 </form>
             </div>
         </div>
-        <div class="col">
+        <div class="col-12 col-lg-6 col-md-12 col-sm-12">
             <div class="doctor-app-image"></div>
         </div>
 

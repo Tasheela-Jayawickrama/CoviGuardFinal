@@ -156,8 +156,8 @@
                         <p>Need any help?...</p>
                     </div>
                     <div class="help-buttons">
-                        <img src="images/phoneicon.png" alt="" width="50px">
-                        <img src="images/mailicon.png" alt="" width="50px">
+                        <a href="callto:+766308272"><img src="images/phoneicon.png" alt="" width="50px"></a>
+                        <a href=mailto:coviguardvac@gmail.com"><img src="images/mailicon.png" alt="" width="50px"></a>
                     </div>
                 </div>
             </div>
