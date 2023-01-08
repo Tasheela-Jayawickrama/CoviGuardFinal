@@ -23,13 +23,6 @@ class AdminController extends Controller
         return view('admin.home', compact('users_table','all_users', 'all_doctors', 'all_doctor_appointments', 'all_vaccination_appointments')); // Add The retrived data to the afmin home page
     }
 
-    public function searchUsers(){
-        $searchText = $_GET['query'];
-        $users = User::where('name','LIKE','%'.$searchText.'%')->get();
-        return view('admin.home',compact('users'));
-    }
-
-
     public function add_view()
     {
         return view('admin.add_doctor');
@@ -126,5 +119,15 @@ class AdminController extends Controller
         $vaccination_appointment = VaccinationAppointment::find($id);
         $vaccination_appointment->delete();
         return redirect()->back();
+    }
+
+    public function searchUsersByName(){
+        $all_users = User::where('user_type', '0')->count();
+        $all_doctors = Doctor::count();
+        $all_doctor_appointments = Appointment::count();
+        $all_vaccination_appointments = VaccinationAppointment::count();
+        $search_text = $_GET['query'];
+        $user = User::where('name','LIKE','%'.$search_text.'%')->get();
+        return view('admin.searched_user',compact('user','all_users', 'all_doctors', 'all_doctor_appointments', 'all_vaccination_appointments'));
     }
 }

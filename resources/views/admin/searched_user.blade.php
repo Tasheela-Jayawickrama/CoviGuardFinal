@@ -1,4 +1,4 @@
-<?php echo $__env->make('admin.admin_body', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
+@include('admin.admin_body')
 
     <!doctype html>
 <html lang="en">
@@ -19,6 +19,38 @@
         .card-subtitle {
             color: black;
             width: 100%;
+        }
+
+        .count .fa-user {
+            background-color: blue;
+        }
+
+        .count .fa-user-doctor {
+            background-color: green;
+        }
+
+        .count .fa-hand-holding-medical {
+            background-color: yellow;
+        }
+
+        .count .fa-virus {
+            background-color: red;
+        }
+
+        .card-user {
+            border: 2px solid blue
+        }
+
+        .card-doctor {
+            border: 2px solid green;
+        }
+
+        .card-doc-app {
+            border: 2px solid yellow;
+        }
+
+        .card-vac-app {
+            border: 2px solid red;
         }
 
         .count h1 {
@@ -62,70 +94,70 @@
 </head>
 <body>
 
-
+{{-- Admin Page Content --}}
 <div class="content content-home">
     <div class="row count">
 
-        
+        {{-- All users count--}}
         <div class="col">
-            <div class="card border-3 card-user border border-primary">
+            <div class="card card-user">
                 <div class="card-body">
                     <div class="card-body-name">
-                        <h5 class="card-title"><i class="fa-solid fa-user text-light bg-primary"></i></h5>
+                        <h5 class="card-title"><i class="fa-solid fa-user"></i></h5>
                         <h6 class="card-subtitle mb-2 ">Total Users</h6>
                     </div>
-                    <h1><?php echo e($all_users); ?></h1>
+                    <h1>{{ $all_users }}</h1>
                 </div>
 
             </div>
         </div>
 
-        
+        {{-- All Doctors count --}}
         <div class="col">
-            <div class="card border-3 card-doctor border border-success">
+            <div class="card card-doctor">
                 <div class="card-body">
                     <div class="card-body-name">
-                        <h5 class="card-title"><i class="fa-solid fa-user-doctor text-light bg-success"></i></h5>
+                        <h5 class="card-title"><i class="fa-solid fa-user-doctor"></i></h5>
                         <h6 class="card-subtitle mb-2 ">Total Doctors</h6>
                     </div>
-                    <h1><?php echo e($all_doctors); ?></h1>
+                    <h1>{{ $all_doctors }}</h1>
                 </div>
             </div>
         </div>
 
-        
+        {{-- All Doctor appointments count --}}
         <div class="col">
-            <div class="card border-3 card-doc-app border border-warning">
+            <div class="card card-doc-app">
                 <div class="card-body">
                     <div class="card-body-name">
                         <h5 class="card-title">
-                            <i class="fa-solid fa-hand-holding-medical text-light bg-warning"></i>
+                            <i class="fa-solid fa-hand-holding-medical"></i>
                         </h5>
                         <h6 class="card-subtitle mb-2 ">Doctor Appointments</h6>
                     </div>
-                    <h1><?php echo e($all_doctor_appointments); ?></h1>
+                    <h1>{{ $all_doctor_appointments }}</h1>
                 </div>
             </div>
         </div>
 
-        
+        {{-- All Vaccination appointments count --}}
         <div class="col">
-            <div class="card border-3 card-vac-app border border-danger">
+            <div class="card card-vac-app">
                 <div class="card-body">
                     <div class="card-body-name">
                         <h5 class="card-title">
-                            <i class="fa-solid fa-virus text-light bg-danger"></i>
+                            <i class="fa-solid fa-virus"></i>
                         </h5>
                         <h6 class="card-subtitle mb-2 ">Vaccination Appointments</h6>
                     </div>
-                    <h1><?php echo e($all_vaccination_appointments); ?></h1>
+                    <h1>{{ $all_vaccination_appointments }}</h1>
                 </div>
             </div>
         </div>
     </div>
     <div class="row my-4">
         <div class="col-6">
-            <form class="form-inline d-flex" type="get" action="<?php echo e(route('searchUsersByName')); ?>">
+            <form class="form-inline d-flex" type="get" action="{{ route('searchUsersByName') }}">
                 <input class="form-control mr-sm-2 mr-2 rounded" type="search" placeholder="Search User" aria-label="Search" name="query">
                 <button class="btn btn-success bg-success" type="submit">Search</button>
             </form>
@@ -150,16 +182,16 @@
                 </tr>
                 </thead>
                 <tbody style="font-size: 10px">
-                <?php $__currentLoopData = $users_table; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $users): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                @foreach( $user  as $users)
 
                     <tr>
-                        <td><?php echo e($users->name); ?></td>
-                        <td><?php echo e($users->nic); ?></td>
-                        <td><?php echo e($users->email); ?></td>
-                        <td><?php echo e($users->phone); ?></td>
-                        <td><?php echo e($users->address); ?></td>
+                        <td>{{ $users->name }}</td>
+                        <td>{{ $users->nic }}</td>
+                        <td>{{ $users->email }}</td>
+                        <td>{{ $users->phone }}</td>
+                        <td>{{ $users->address }}</td>
                     </tr>
-                    <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+                @endforeach
                 </tbody>
             </table>
         </div>
@@ -168,4 +200,3 @@
 
 </body>
 </html>
-<?php /**PATH C:\laragon\www\CoviGuardFinal\resources\views/admin/home.blade.php ENDPATH**/ ?>

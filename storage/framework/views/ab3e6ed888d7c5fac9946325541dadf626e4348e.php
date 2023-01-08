@@ -50,6 +50,10 @@
     <section id="doctors">
         <?php echo $__env->make('welcomepageitems.doctorpage', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
     </section>
+
+    <section id="footer">
+
+    </section>
     <?php echo $__env->make('layouts.all-js', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
 
 

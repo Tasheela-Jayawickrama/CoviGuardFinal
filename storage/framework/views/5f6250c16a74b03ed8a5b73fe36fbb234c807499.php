@@ -45,9 +45,15 @@
         <div class="m-header">
             <nav>
                 <a href="#"><i class="fas fa-inbox"></i></a>
+                <?php if(auth()->user()->user_type == 0): ?>
+                    <a href="<?php echo e(route('userDashBoard')); ?>"><i class="fa-solid fa-arrow-left-long"></i>To DashBoard</a>
+                <?php elseif(auth()->user()->user_type == 1): ?>
+                    <a href="<?php echo e(route('admin_dashboard')); ?>"><i class="fa-solid fa-arrow-left-long"></i></a>
+                <?php endif; ?>
                 
                 <nav class="m-header-right">
                     <a href="#"><i class="fas fa-cog settings-btn"></i></a>
+
                     <a href="#" class="listView-x"><i class="fas fa-times"></i></a>
                 </nav>
             </nav>

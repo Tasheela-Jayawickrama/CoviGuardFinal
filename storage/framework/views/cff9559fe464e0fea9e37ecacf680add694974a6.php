@@ -122,14 +122,14 @@
     .doc-card {
         flex: 0 0 auto;
         width: 300px;
-        height: 450px;
+        height: 400px;
         margin-right: 40px;
         box-shadow: 0 0 10px darkblue;
         display: flex;
         align-items: center;
         justify-content: center;
         flex-direction: column;
-        border-radius: 25px 25px 0 0;
+        border-radius: 5px 5px 5px 5px;
     }
 
     .doc-image {
@@ -140,7 +140,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        border-radius: 25px 25px 0 0;
+        border-radius: 5px 5px 0 0;
         background-size: cover;
         background-position: center;
     }

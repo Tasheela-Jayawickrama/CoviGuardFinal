@@ -19,11 +19,16 @@
                                     <img src="doctorimage/<?php echo e($doctor->image); ?>" class="card-img-top" alt="...">
                                 </div>
                                 <div class="doc-info">
-                                    <h2 class="doc-name"><?php echo e($doctor->name); ?></h2>
-                                    <p class="doc-short-description"><?php echo e($doctor->email); ?></p>
-                                    <p class="doc-short-description"><?php echo e($doctor->phone); ?></p>
-                                    <p class="doc-short-description"><?php echo e($doctor->speciality); ?></p>
+                                    <h2 class="doc-name text-center fw-bold"><?php echo e($doctor->name); ?></h2>
+                                    <p class="doc-short-description mb-4 text-center fw-bold"><?php echo e($doctor->email); ?></p>
+                                    <p class="doc-short-description mb-4 text-center fw-bold"><?php echo e($doctor->phone); ?></p>
+                                    <p class="doc-short-description mb-4 text-center fw-bold"><?php echo e($doctor->speciality); ?></p>
+
                                 </div>
+                                <div class="text-center pb-2">
+                                    <a href="<?php echo e(route('login')); ?>"><button class="btn btn-outline-primary">Contact Doctor</button></a>
+                                </div>
+
                             </div>
                         <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                     </div>

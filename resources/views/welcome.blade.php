@@ -50,6 +50,10 @@
     <section id="doctors">
         @include('welcomepageitems.doctorpage')
     </section>
+
+    <section id="footer">
+{{--        @include('welcomepageitems.footer')--}}
+    </section>
     @include('layouts.all-js')
 
 

@@ -19,11 +19,16 @@
                                     <img src="doctorimage/{{$doctor->image}}" class="card-img-top" alt="...">
                                 </div>
                                 <div class="doc-info">
-                                    <h2 class="doc-name">{{$doctor->name}}</h2>
-                                    <p class="doc-short-description">{{$doctor->email}}</p>
-                                    <p class="doc-short-description">{{$doctor->phone}}</p>
-                                    <p class="doc-short-description">{{$doctor->speciality}}</p>
+                                    <h2 class="doc-name text-center fw-bold">{{$doctor->name}}</h2>
+                                    <p class="doc-short-description mb-4 text-center fw-bold">{{$doctor->email}}</p>
+                                    <p class="doc-short-description mb-4 text-center fw-bold">{{$doctor->phone}}</p>
+                                    <p class="doc-short-description mb-4 text-center fw-bold">{{$doctor->speciality}}</p>
+
                                 </div>
+                                <div class="text-center pb-2">
+                                    <a href="{{ route('login') }}"><button class="btn btn-outline-primary">Contact Doctor</button></a>
+                                </div>
+
                             </div>
                         @endforeach
                     </div>
