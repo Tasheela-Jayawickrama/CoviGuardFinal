@@ -100,10 +100,10 @@
 
         {{-- All users count--}}
         <div class="col">
-            <div class="card card-user">
+            <div class="card border-3 card-user border border-primary">
                 <div class="card-body">
                     <div class="card-body-name">
-                        <h5 class="card-title"><i class="fa-solid fa-user"></i></h5>
+                        <h5 class="card-title"><i class="fa-solid fa-user text-light bg-primary"></i></h5>
                         <h6 class="card-subtitle mb-2 ">Total Users</h6>
                     </div>
                     <h1>{{ $all_users }}</h1>
@@ -114,10 +114,10 @@
 
         {{-- All Doctors count --}}
         <div class="col">
-            <div class="card card-doctor">
+            <div class="card border-3 card-doctor border border-success">
                 <div class="card-body">
                     <div class="card-body-name">
-                        <h5 class="card-title"><i class="fa-solid fa-user-doctor"></i></h5>
+                        <h5 class="card-title"><i class="fa-solid fa-user-doctor text-light bg-success"></i></h5>
                         <h6 class="card-subtitle mb-2 ">Total Doctors</h6>
                     </div>
                     <h1>{{ $all_doctors }}</h1>
@@ -127,11 +127,11 @@
 
         {{-- All Doctor appointments count --}}
         <div class="col">
-            <div class="card card-doc-app">
+            <div class="card border-3 card-doc-app border border-warning">
                 <div class="card-body">
                     <div class="card-body-name">
                         <h5 class="card-title">
-                            <i class="fa-solid fa-hand-holding-medical"></i>
+                            <i class="fa-solid fa-hand-holding-medical text-light bg-warning"></i>
                         </h5>
                         <h6 class="card-subtitle mb-2 ">Doctor Appointments</h6>
                     </div>
@@ -142,11 +142,11 @@
 
         {{-- All Vaccination appointments count --}}
         <div class="col">
-            <div class="card card-vac-app">
+            <div class="card border-3 card-vac-app border border-danger">
                 <div class="card-body">
                     <div class="card-body-name">
                         <h5 class="card-title">
-                            <i class="fa-solid fa-virus"></i>
+                            <i class="fa-solid fa-virus text-light bg-danger"></i>
                         </h5>
                         <h6 class="card-subtitle mb-2 ">Vaccination Appointments</h6>
                     </div>
