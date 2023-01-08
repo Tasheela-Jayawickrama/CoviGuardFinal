@@ -1,7 +1,5 @@
 @include('admin.admin_body')
-
     <!doctype html>
-<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
@@ -158,7 +156,8 @@
     <div class="row my-4">
         <div class="col-6">
             <form class="form-inline d-flex" type="get" action="{{ route('searchUsersByName') }}">
-                <input class="form-control mr-sm-2 mr-2 rounded" type="search" placeholder="Search User" aria-label="Search" name="query">
+                <input class="form-control mr-sm-2 mr-2 rounded" type="search" placeholder="Search User"
+                       aria-label="Search" name="query">
                 <button class="btn btn-success bg-success" type="submit">Search</button>
             </form>
 
