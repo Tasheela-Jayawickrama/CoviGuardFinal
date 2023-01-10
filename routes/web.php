@@ -44,11 +44,11 @@ Route::middleware([
 
 
 Route::get('/home', [HomeController::class, 'redirect'])->name('redirect')->middleware('auth', 'verified');
-Route::get('/doctors', [HomeController::class, 'doctorPage'])->name('doctor-page');
+Route::get('/doctors', [HomeController::class, 'doctorPage'])->name('doctor-page')->middleware('auth', 'verified');
 Route::get('/appointmentpage', [HomeController::class, 'appointmentPage'])->name('appointmentpage');
 Route::post('/appointment', [HomeController::class, 'appointment'])->name('appointment');
 Route::get('/my_appointment', [HomeController::class, 'my_appointment'])->name('my_appointment');
-Route::get('/vaccination_appointments', [HomeController::class, 'vaccinationAppointment'])->name('vaccination_appointments');
+Route::get('/vaccination_appointments', [HomeController::class, 'vaccinationAppointment'])->name('vaccination_appointments')->middleware('auth', 'verified');
 Route::post('/vaccination_appointments', [HomeController::class, 'vaccinationAppointmentSave'])->name('vaccination_appointments_save');
 Route::get('/cancel_appoint/{id}', [HomeController::class, 'cancel_appoint'])->name('cancel_appoint');
 Route::get('/symptoms', [HomeController::class, 'symptomsPage'])->name('symptoms');
@@ -72,6 +72,7 @@ Route::get('/vaccination_appointment', [AdminController::class, 'vaccinationAppo
 Route::post('/appointment_update/{id}', [AdminController::class, 'appointmentUpdate'])->name('appointment_update');
 Route::get('/delete_vaccination_appointment/{id}', [AdminController::class, 'cancelVaccinationAppoint'])->name('cancel_vaccination_appointment');
 Route::get('/search-users', [AdminController::class, 'searchUsersByName'])->name('searchUsersByName');
+
 
 Route::post('/contact_us', [ContactController::class, 'contactUs'])->name('contact_us');
 Route::get('/contact_details', [ContactController::class, 'userContacts'])->name('user_contacts');

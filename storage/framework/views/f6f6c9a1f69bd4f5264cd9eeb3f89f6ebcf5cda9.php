@@ -193,25 +193,25 @@
                     <div class="row g-3">
 
                         <div class="col-12">
-                            <input type="text" class="form-control" id="fullName" placeholder="Full Name" name="name">
+                            <input type="text" class="form-control" id="fullName" placeholder="Full Name" name="name" required>
                         </div>
                         <div class="col-12">
-                            <input type="email" class="form-control" id="email" placeholder="E-mail" name="email">
+                            <input type="email" class="form-control" id="email" placeholder="E-mail" name="email" required>
                         </div>
                         <div class="col-12">
-                            <input type="text" class="form-control" id="inputAddress" placeholder="Address" name="address">
+                            <input type="text" class="form-control" id="inputAddress" placeholder="Address" name="address" required>
                         </div>
                         <div class="col-md-6">
-                            <input type="text" class="form-control" id="identity" name="nic" placeholder="Identity">
+                            <input type="text" class="form-control" id="identity" name="nic" placeholder="Identity" required>
                         </div>
                         <div class="col-md-6">
-                            <input type="date" class="form-control" id="dob" name="dob" placeholder="DOB">
+                            <input type="date" class="form-control" id="dob" name="dob" placeholder="DOB" required>
                         </div>
                         <div class="col-md-6">
-                            <input type="number" class="form-control" id="phone" name="phone" placeholder="Mobile">
+                            <input type="number" class="form-control" id="phone" name="phone" placeholder="Mobile" required>
                         </div>
                         <div class="col-md-6">
-                            <select id="gender" class="form-select" name="gender">
+                            <select id="gender" class="form-select" name="gender" required>
                                 <option selected disabled>Gender</option>
                                 <option value="Male">Male</option>
                                 <option value="Female">Female</option>
@@ -219,10 +219,10 @@
                             </select>
                         </div>
                         <div class="col-md-6">
-                            <input type="password" class="form-control" id="dob" name="password" placeholder="Password">
+                            <input type="password" class="form-control" id="dob" name="password" placeholder="Password" required>
                         </div>
                         <div class="col-md-6">
-                            <input type="password" class="form-control" id="dob" name="password_confirmation" placeholder="Confirm Password">
+                            <input type="password" class="form-control" id="dob" name="password_confirmation" placeholder="Confirm Password" required>
                         </div>
                         <div class="col-12">
                             <button class="btn btn-success reg-btns" type="submit">Register</button>
@@ -230,7 +230,6 @@
                         <div class="exists-acc">Already Have An Account?</div>
                         <div class="col-12">
                             <a href="<?php echo e(route('login')); ?>"><button class="btn btn-primary login-btns" type="button">Login</button></a>
-
                         </div>
                 </form>
             </div>

@@ -8,7 +8,7 @@
     <link rel="icon" href="images/logo.png" type="image/jpg">
     <title>Citizen Login</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+          integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
 
@@ -51,7 +51,8 @@
             align-items: center;
             justify-content: center;
             width: 600px;
-            height: 600px;s
+            height: 600px;
+            s
         }
 
         .back {
@@ -128,7 +129,8 @@
             font-weight: 900;
             color: blue;
         }
-        .login-form-area   {
+
+        .login-form-area {
             padding: 0 100px;
             display: flex;
             align-items: center;
@@ -140,69 +142,74 @@
 </head>
 
 <body>
-    <div class="body-outer">
-        <div class="body-inner">
-            <div class="left-side">
-                <div class="back"><a href="<?php echo e(route('main_page')); ?>"><img src="images/backarrow.svg" alt=""
-                            class="backarrow"></a></div>
-                <div class="desc">
-                    <div class="logo"><img src="images/logo.png" alt="" width="250px"></div>
-                    <div class="name">
-                        <h4>Welcome to CoviGuard</h4>
-                    </div>
-                </div>
-                <div class="buttons">
-                    <div class="helps">
-                        <p>Need any help?...</p>
-                    </div>
-                    <div class="help-buttons">
-                        <a href="callto:+766308272"><img src="images/phoneicon.png" alt="" width="50px"></a>
-                        <a href=mailto:coviguardvac@gmail.com"><img src="images/mailicon.png" alt="" width="50px"></a>
-                    </div>
+<div class="body-outer">
+    <div class="body-inner">
+        <div class="left-side">
+            <div class="back"><a href="<?php echo e(route('main_page')); ?>"><img src="images/backarrow.svg" alt=""
+                                                                      class="backarrow"></a></div>
+            <div class="desc">
+                <div class="logo"><img src="images/logo.png" alt="" width="250px"></div>
+                <div class="name">
+                    <h4>Welcome to CoviGuard</h4>
                 </div>
             </div>
-            <div class="right-side">
-                <div class="login-form-area">
-                    <?php if(session('status')): ?>
-                        <div class="mb-4 font-medium text-sm text-green-600">
-                            <?php echo e(session('status')); ?>
-
-                        </div>
-                    <?php endif; ?>
-
-                    <form method="POST" action="<?php echo e(route('login')); ?>">
-                        <?php echo csrf_field(); ?>
-                        <h2 class="text-center title">Login</h2> <br>
-
-                        <div class="row g-3">
-                            <div class="col-12">
-                                <label for="identity" class="form-label">Your Identity Here</label>
-                                <input type="text" class="form-control" id="identity" placeholder="Identity"
-                                    name="nic">
-                            </div>
-                            <div class="col-12">
-                                <label for="password" class="form-label">Your Password Here</label>
-                                <input type="password" class="form-control" id="password" placeholder="Password"
-                                    name="password">
-                            </div>
-                            <div class="col-12">
-                                <button type="submit" class="btn btn-success">Login</button>
-                            </div>
-                            <div class="exists-acc">
-                                dont have an account?
-                            </div>
-                            <div class="col-12">
-                                <a href="<?php echo e(route('register')); ?>"><button type="button"
-                                        class="btn btn-primary">Register</button></a>
-                            </div>
-
-                        </div>
-                    </form>
+            <div class="buttons">
+                <div class="helps">
+                    <p>Need any help?...</p>
+                </div>
+                <div class="help-buttons">
+                    <a href="callto:+94766308272"><img src="images/phoneicon.png" alt="" width="50px"></a>
+                    <a href=mailto:coviguardvac@gmail.com"><img src="images/mailicon.png" alt="" width="50px"></a>
                 </div>
             </div>
         </div>
+        <div class="right-side">
+            <div class="login-form-area">
+                <?php if(session('status')): ?>
+                    <div class="mb-4 font-medium text-sm text-green-600">
+                        <?php echo e(session('status')); ?>
+
+                    </div>
+                <?php endif; ?>
+
+                <form method="POST" action="<?php echo e(route('login')); ?>">
+                    <?php echo csrf_field(); ?>
+                    <h2 class="text-center title">Login</h2> <br>
+
+                    <div class="row g-3">
+                        <div class="col-12">
+                            <label for="identity" class="form-label">Your Identity Here</label>
+                            <input type="text" class="form-control" id="identity" placeholder="Identity"
+                                   name="nic">
+                        </div>
+                        <div class="col-12">
+                            <label for="password" class="form-label">Your Password Here</label>
+                            <input type="password" class="form-control" id="password" placeholder="Password"
+                                   name="password">
+                        </div>
+                        <div class="col-12 text-underline ml-2">
+                            <a href="<?php echo e(route('password.email')); ?>">Forgot Password</a>
+                        </div>
+                        <div class="col-12">
+                            <button type="submit" class="btn btn-success">Login</button>
+                        </div>
+                        <div class="exists-acc">
+                            dont have an account?
+                        </div>
+                        <div class="col-12">
+                            <a href="<?php echo e(route('register')); ?>">
+                                <button type="button"
+                                        class="btn btn-primary">Register
+                                </button>
+                            </a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
     </div>
-    </div>
+</div>
+</div>
 </body>
 
 </html>

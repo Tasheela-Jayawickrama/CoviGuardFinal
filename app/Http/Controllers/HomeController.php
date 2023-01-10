@@ -144,7 +144,10 @@ class HomeController extends Controller
             $data->user_id = Auth::user()->id;
         }
         $data->save();
-        return redirect()->back()->with(["message"=>"Vaccination Appointment Request Successfully","vaccination_id"=>$vaccination_id]);
+        return redirect()->back()->with([
+            "message"=>"Vaccination Appointment Request Successfully",
+            "vaccination_id"=>$vaccination_id
+        ]);
     }
 
     public function vaccinationCard(){
